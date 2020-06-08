@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TUM.ai - Blog - CNNs in Keras</title>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/logo/logo_round_transparent.png">
+    <meta name="description" content="This article wants to explain the functionality of the different layers in convolutional neural networks and show a simple CNN implementation in the commonly used python machine learning framework keras.">
+    <link rel="icon" type="image/png" sizes="407x283" href="assets/img/logo/logo.png">
+    <link rel="icon" type="image/png" sizes="407x283" href="assets/img/logo/logo.png">
+    <link rel="icon" type="image/png" sizes="407x283" href="assets/img/logo/logo.png">
+    <link rel="icon" type="image/png" sizes="407x283" href="assets/img/logo/logo.png">
+    <link rel="icon" type="image/png" sizes="407x283" href="assets/img/logo/logo.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166440742-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166440742-1');
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md shadow navigation-clean-button sticky-top" style="font-family: Roboto, sans-serif;background-color: #ffffff;opacity: 0.95;height: 65px;">
+        <div class="container" style="background-color: transparent;"><a class="navbar-brand" href="index.html" style="padding: 0px;"><img src="assets/img/logo/logo_8_t.png" style="max-height: 50px;padding: 8px;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse text-center" id="navcol-1" style="background-color: #fff;opacity: 1;width: 100%;">
+                <ul class="nav navbar-nav ml-auto" style="color: #fcfeff;">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="forStudents.html" style="color: #191e20;font-family: Montserrat, sans-serif;font-weight: 800;padding: 12px 12px;">For Students</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="aboutus.html" style="color: #191e20;font-family: Montserrat, sans-serif;font-weight: 800;padding: 12px 12px;">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="forPartners.html" style="color: #191e20;font-family: Montserrat, sans-serif;font-weight: 800;padding: 12px 12px;">For Partners</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="blog.html" style="color: #191e20;font-family: Montserrat, sans-serif;font-weight: 800;padding: 8px 16px 12px 8px;padding-top: 12px;">Blog</a></li>
+                </ul><button class="btn btn-primary" data-toggle="modal" data-target="#modal1" type="button" style="margin: 5px 0px;">Contact</button></div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal-1">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Contact TUM.ai</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/logo/logo_round_transparent.png">
+                                    <h5>Your contact at TUM.ai</h5>
+                                    <p class="font-weight-light mb-0">Florian Mysliwetz<br>Arcisstraße 21, 80333 München<br>contact@tum-ai.com</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <form class="form-inline" data-bss-recipient="43c9dff80f0b203240afd51702f87891"><form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label><strong>Name</strong></label>
+            <input type="text" class="form-control" placeholder="" required minlength="1">
+            <div class="invalid-feedback">
+                Please enter your name.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label><strong>Company</strong></label>
+            <input type="text" class="form-control" placeholder="">
+            <div class="invalid-feedback">
+                Please enter your companies name.
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label><strong>Email</strong></label>
+            <input type="email" class="form-control" placeholder="">
+            <div class="invalid-feedback">
+                Please enter your email address.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+                        <label><strong>Phone</strong></label>
+            <input type="text" class="form-control" placeholder="" required>
+            <div class="invalid-feedback">
+                Please enter your phone number.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label><strong>Message</strong></label>
+            <textarea class="form-control" placeholder="" required minlength="1"></textarea>
+            <div class="invalid-feedback">
+                Please enter a message.
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary align-right" type="submit">Submit</button>
+    
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script></form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-right" style="margin: 0px;padding-top: 10px;">By submittion you accept our&nbsp;<a href="impressum.html" style="font-size: 16px;">Terms &amp; Conditions</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Contact TUM.ai</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/logo/logo_round_transparent.png">
+                                <h5>Your contact at TUM.ai</h5>
+                                <p class="font-weight-light mb-0">Florian Mysliwetz<br>Arcisstraße 21, 80333 München<br>contact@tum-ai.com</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <form data-bss-recipient="43c9dff80f0b203240afd51702f87891"><form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label><strong>Name</strong></label>
+            <input type="text" class="form-control" placeholder="" required minlength="1">
+            <div class="invalid-feedback">
+                Please enter your name.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label><strong>Company</strong></label>
+            <input type="text" class="form-control" placeholder="">
+            <div class="invalid-feedback">
+                Please enter your companies name.
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label><strong>Email</strong></label>
+            <input type="email" class="form-control" placeholder="">
+            <div class="invalid-feedback">
+                Please enter your email address.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+                        <label><strong>Phone</strong></label>
+            <input type="text" class="form-control" placeholder="" required>
+            <div class="invalid-feedback">
+                Please enter your phone number.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label><strong>Message</strong></label>
+            <textarea class="form-control" placeholder="" required minlength="1"></textarea>
+            <div class="invalid-feedback">
+                Please enter a message.
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary align-right" type="submit">Submit</button>
+    
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script></form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-right" style="margin: 0px;padding-top: 10px;">By submission you accept our&nbsp;<a href="impressum.html" style="font-size: 16px;">Terms &amp; Conditions</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-clean">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="intro">
+                        <h1 class="text-center"><strong>Convolutional</strong><br><strong>Neural Networks in keras</strong><br></h1>
+                        <p class="text-center"><span class="by">by</span> <a href="#">jakOb Kruse</a><span class="date">APRIL 21ST, 2020</span></p><img class="img-fluid" src="assets/img/desk.jpg"></div>
+                    <div class="text">
+                        <p>Convolutional neural networks are a class of deep neural networks which are usually used for image analysis. They usually consist of convolutional, pooling and fully connected layers, which will all be explained in this article.
+                            The layers are usually fully connected, which tends to lead to overfitting in larger networks. Therefore, additional regularization and normalization layers are often used to avoid this problem. <br><br>This article will explain
+                            the functionality of the different layers in convolutional neural networks and show a simple CNN implementation in the commonly used Python machine learning framework keras [1]. <br></p>
+                        <p></p>
+                        <h2>1. Motivation</h2>
+                        <p>A question that you might ask yourself is why we are using these special convolutional neural networks at all. Why not just use a normal neural network for the task of image classification?<br><br>There are several reasons for
+                            that. One very important reason is that images tend to be relatively large, which leads to a lot of parameters in standard neural networks. As an example, let's use a 256x256 pixel color image. This image has 256*256 = 65536
+                            pixels with 3 RGB color channels, which leads to ~196.000 input parameters. If we use a first hidden layer with 1024 neurons, we have more than 200 million parameters only in our first layer. Updating these parameters with
+                            backpropagation involves a huge amount of computations. Using convolutional neural networks bypasses this problem by using the concept of filters. <br><br>Apart from that, convolutional neural networks are more capable of detecting
+                            patterns in spatial areas of an image and can find patterns anywhere in the image. As an example, if we train a standard neural network with a certain cat image and then feed a shifted version of this picture, the neural network
+                            will probably not detect the cat because other neurons will be activated. Using the concept of filters, this can be avoided in convolutional neural networks.<br></p>
+                        <h2>2. keras Introduction</h2>
+                        <p>keras is a Python deep learning framework which is very user-friendly but also powerful. <br>Let us install keras and some other packages we need:<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    $ pip3 install keras tensorflow numpy mnist
+  </code>
+</pre>
+                        <p>Then, import the required packages into your program:<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    import numpy as np
+    import keras
+  </code>
+</pre>
+                        <p>I will use the MNIST dataset in this article. The mnist dataset consists of 60000 images of handwritten digits (0 - 9) and is a commonly used beginner dataset. The goal is to classify the digits in the images. Each image is 28x28
+                            pixels large and has only one gray-scale channel. First, let's load the mnist dataset:<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    from keras.datasets import mnist
+    (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+  </code>
+</pre>
+                        <figure><img class="figure-img" src="assets/img/example_images.png">
+                            <figcaption>Example images from the mnist dataset</figcaption>
+                        </figure>
+                        <p>Now, the dataset should be preprocessed to be easily used by the keras package. We therefore convert the labels of the image to categorical labels. This converts our single label into a 10-element label vector which contains only
+                            zeros and a single one (representing the digit) for each image.<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    from keras.utils import to_categorical
+    train_images = np.expand_dims(train_images, axis=3)
+    test_images = np.expand_dims(test_images, axis=3)
+    train_labels = to_categorical(train_labels)
+    test_labels = to_categorical(test_labels)
+    print(train_images.shape)    # (60000, 28, 28, 1)
+    print(train_labels.shape)    # (60000, 10)
+
+  </code>
+</pre>
+                        <p>Let's start building the convolutional neural network. We first create a Sequential model in keras. Later, we then add the different types of layers to this model.<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    from keras.models import Sequential
+    model = Sequential()
+  </code>
+</pre>
+                        <h2>3. Layers</h2>
+                        <h2>3.1 Dense and Flatten</h2>
+                        <p>First, let us create a simple standard neural network in keras as a baseline. We start by flattening the image through the use of a Flatten layer. Then, we will use two fully connected layers with 32 neurons and ‘relu’ activation
+                            function as hidden layers and one fully connected softmax layer with ten neurons as our output layer.<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    from keras.layers import Flatten, Dense
+    model.add(Flatten(input_shape=(28, 28, 1)))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(10, activation='softmax'))
+  </code>
+</pre>
+                        <p>Let us verify that everything worked as expected by viewing the model summary.<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    model.summary()
+
+OUT:
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten_1 (Flatten)          (None, 784)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                25120     
+_________________________________________________________________
+dense_2 (Dense)              (None, 32)                1056      
+_________________________________________________________________
+dense_3 (Dense)              (None, 10)                330       
+=================================================================
+Total params: 26,506
+Trainable params: 26,506
+Non-trainable params: 0
+_________________________________________________________________
+  </code>
+</pre>
+                        <p>To evaluate the performance of this baseline network, we need to set the loss function and choose the optimizer we want to use. Since we have categorical labels in our classification task, we will use the categorical crossentropy
+                            loss. As an optimizer, we will use the commonly used Adam optimizer. Then, we train (fit) the network with batch size 128 and 10 epochs.<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.fit(train_images, train_labels,
+          batch_size=128,
+          epochs=10,
+          validation_data=(test_images, test_labels))
+          
+OUT:
+.....
+Epoch 10/10
+60000/60000 [==============================] - 2s 26us/step 
+- loss: 0.2728 - accuracy: 0.9237 - val_loss: 0.3089 - val_accuracy: 0.9233
+  </code>
+</pre>
+                        <p>As we can see, the baseline model already achieves a pretty good test accuracy of 92.33% for this task. However, let us see if we can improve these results by using a convolutional neural network.<br></p>
+                        <h2>3.2 Convolutional Layer</h2>
+                        <p>Convolutional neural networks are networks that use convolutional layers. These layers are the main reason why CNNs outperform NNs when it comes to image classification. Let us look at how these convolutional layers work.<br><br>Convolutional
+                            layers consist of a set of filters, which are used to look at spatial areas of the image. For example, if we use a 28 x 28 x 3 image, we could use a 5 x 5 x 3 filter, which looks at a 5x5 pixel area of the image. The last dimension
+                            of the filter is always equal to the last input dimension (the number of channels of the image).<br></p>
+                        <figure><img class="figure-img" src="assets/img/completefilter.png">
+                            <figcaption>Convolutional layer visualization</figcaption>
+                        </figure>
+                        <p>The output of the convolutional layer is calculated by performing an element-wise multiplication<br>of the filter with the area of the image that the filter currently looks at. Then, the results of the multiplications are summed
+                            up to create one of the outputs. Finally, the filter is moved one pixel (or multiple pixels, see later) to the right and the next output is calculated. This is done for all rows and columns so that the output is a 2D matrix.&nbsp;<br>(Output
+                            dimension for the example above: (28-5+1) x (28-5+1) = 24 x 24).<br></p>
+                        <figure><img class="figure-img" src="assets/img/Untitled%20Diagram(1).png">
+                            <figcaption>The spatial areas that the filter looks at for the first row of the output image (stride 1)</figcaption>
+                        </figure>
+                        <p>Normally, multiple filters are used in a convolutional layer, resulting in a 3-dimensional output of dimensions (outputDIM1 x outputDIM2 x numFilters).<br><br><strong><span style="text-decoration: underline;">Padding:</span> </strong>When
+                            using a filter with a size of 2x2 or larger, the output dimension of the convolutional layer will always be smaller than the input dimension. To avoid that, we can use a technique called padding. This means that we add zeros
+                            around the input of the convolutional layer to get an output that is larger. For example, if we use a 28x28 image with filter size 3 and a padding of 1 (this adds layer of zeros around the image), the output of the convolutional
+                            layer will also be of dimension 28x28.<br>Note: In keras, we can specify padding=”same” to automatically add padding such that the output and input dimensions are the same.<br></p>
+                        <figure><img class="figure-img" src="assets/img/Untitled%20Diagram(2).png">
+                            <figcaption>Padding of 1</figcaption>
+                        </figure>
+                        <p><strong><span style="text-decoration: underline;">Stride:</span></strong> The stride specifies the number of pixels that the filter is moved between the spatial areas that it looks at. If we use a stride of 2, the filter is moved
+                            two pixels to the right to produce the next output.<br><br><strong><span style="text-decoration: underline;">keras:</span></strong><br>Now, let us create a simple convolutional neural network in keras and see how it performs.
+                            First, I will add two convolutional layers to our current neural network. The first layer uses 64 filters of size 3x3, the second one uses 32 filters of the same size.<br></p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    from keras.layers import Dense, Conv2D, Flatten
+    model = Sequential()
+    model.add(Conv2D(64, (3, 3), strides=(1, 1), padding='same', activation='relu', input_shape=(28, 28, 1)))
+    model.add(Conv2D(32, (3, 3), strides=(1, 1), padding='same', activation='relu'))
+    model.add(Flatten())
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(10, activation='softmax'))
+  </code>
+</pre>
+                        <p>When looking at the summary, we can see that the convolutional layers have very few parameters compared to the fully connected layers in the network. The large number of parameters in the fully connected layers can result in a
+                            longer training time and larger memory footprint. Let us train the network and see the results.</p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.fit(train_images, train_labels,
+          batch_size=128,
+          epochs=10,
+          validation_data=(test_images, test_labels))
+OUT:
+.....
+Epoch 10/10
+60000/60000 [==============================] - 188s 3ms/step 
+- loss: 0.0137 - accuracy: 0.9956 - val_loss: 0.1022 - val_accuracy: 0.9795
+  </code>
+</pre>
+                        <p>The network now achieves an accuracy of 97.95%, which is a solid result. However, the training time has increased a lot. Lets see if we can reduce it throughout the rest of this article.</p>
+                        <h2>3.2 Pooling Layer</h2>
+                        <p>The pooling layer is another neural network layer that is often used in CNNs. Its concept is very simple. Neighbor pixels in images often have similar values and therefore, neighboring outputs of a convolutional layer often contain
+                            redundant information. Pooling layers address this problem by removing some of this redundancy.<br><br>Pooling layers look at an area of the convolutional output and perform a simple operation on it. Examples for these operations
+                            are max, min and average. For example, a max-pooling layer chooses the maximum value from all its input values as output. The area that the pooling layer looks at is defined by the pool size. A pool size of 2 means that the
+                            pooling operations look at a 2x2 area and the output dimensions are both halfed. For example, applying such a pooling layer to a 24x24 output of a convolutional layer results in a 12x12 pooling layer output. The number of channels
+                            remains untouched by the pooling layer.<br></p>
+                        <figure><img class="figure-img" src="assets/img/pooling.png">
+                            <figcaption>Max Pooling Layer with pool size 2</figcaption>
+                        </figure>
+                        <p>Let's add pooling layers to our neural network and see the results.</p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+    from keras.layers import Dense, Conv2D, Flatten, MaxPooling2D
+    model = Sequential()
+    model.add(Conv2D(64, (3, 3), strides=(1, 1), padding='same', activation='relu', input_shape=(28, 28, 1)))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Conv2D(32, (3, 3), strides=(1, 1), padding='same', activation='relu'))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    model.add(Flatten())
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(32, activation='relu'))
+    model.add(Dense(10, activation='softmax'))
+    model.summary()
+    
+OUT:
+Model: "sequential_3"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_3 (Conv2D)            (None, 28, 28, 64)        640       
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 14, 14, 64)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 14, 14, 32)        18464     
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 7, 7, 32)          0         
+_________________________________________________________________
+flatten_3 (Flatten)          (None, 1568)              0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 32)                50208     
+_________________________________________________________________
+dense_6 (Dense)              (None, 32)                1056      
+_________________________________________________________________
+dense_7 (Dense)              (None, 10)                330       
+=================================================================
+Total params: 70,698
+Trainable params: 70,698
+Non-trainable params: 0
+_________________________________________________________________
+  </code>
+</pre>
+                        <p>The summary shows that we could reduce our number of trainable parameters by more than a factor of 10 compared to the previous case. When training the network using the same command that we used earlier, we can see that the time
+                            was reduced from 188s to 35s per episode while the accuracy increased to 98.38%.</p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<pre class="prettyprint">
+  <code class="prettyprint">
+OUT:
+.....
+Epoch 10/10
+60000/60000 [==============================] - 35s 584us/step 
+- loss: 0.0229 - accuracy: 0.9929 - val_loss: 0.0621 - val_accuracy: 0.9838
+  </code>
+</pre>
+                        <h2>4. Further improvements to the architecture</h2>
+                        <p>The architecture we created in this article is still fairly simple. In this part, I want to mention some options to further improve the network. I won't explain these techniques in detail here, if you need more information on them,
+                            a simple Google search will help.<br><br><strong>Regularization:</strong><br>The network we created does not seem to overfit the data. If overfitting occurs in your application/network, adding Dropout layers or other regularization
+                            techniques (L1, L2, L1 and L2, see keras documentation for details) can help reduce bias in the network.<br><br><strong>Batch Normalization:</strong><br>Adding BatchNormalization layers can help speed up the training of the
+                            neural network.<br><br><strong>Removing Fully Connected Layers:</strong><br>Removing the fully connected layers at the end of the network can decrease the computational complexity. In the network from this article, removing
+                            the two hidden fully connected layers results in a small reduction of training time while having a comparable accuracy.<br><br><strong>Inception Modules:</strong><br>The inception module was invented by Google and basically
+                            is a small network inside the network. It combines multiple parallel convolutional and pooling layers that work well on image classification tasks. The inception module with dimensionality reduction should be used rather than
+                            its naive version.<br><br><strong>Residual connections:</strong><br>In very deep networks, adding residual connections between the layers can help the network perform better.</p>
+                        <h2>5. Conclusion</h2>
+                        <p>In this article, we looked at the concept of convolutional neural networks. We first took a closer look at convolutional layers and pooling layers, which are the most important layers in CNNs.<br>To get some practical experience,
+                            we looked at an example implementation of a CNN in keras which already achieved an accuracy of more than 98% on the mnist training set after only 10 epochs.<br>I hope that you have learned that CNNs are very powerful tools
+                            for image classification tasks and that the article helps you to implement your very own CNN.<br><br>Cheers, <br>Jakob.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color: #000;margin-top: 40px;padding: 40px;">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#modal1">Contact</a></li>
+                <li class="list-inline-item"><a href="impressum.html">Impressum</a></li>
+                <li class="list-inline-item"><a href="datenschutz.html">Datenschutz</a></li>
+                <li class="list-inline-item"></li>
+            </ul>
+        </footer>
+        <p class="copyright">TUM.ai © 2020</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
