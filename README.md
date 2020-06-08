@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aa612d45-6e1e-4d8c-820b-4ea2f1eaf5ae/deploy-status)](https://app.netlify.com/sites/hopeful-poincare-d0e8c5/deploys)
