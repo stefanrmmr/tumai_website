@@ -312,12 +312,28 @@
     <div class="form-row">
         <div class="col-md-12 mb-3">
             <label><strong>Your email?</strong></label>
-            <input type="email" class="form-control" placeholder="Last Name" required>
+            <input type="email" class="form-control" placeholder="Your email" required>
             <div class="valid-feedback">
                 Looks good!
             </div>
             <div class="invalid-feedback">
                 Please enter your email address.
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label><strong>Your phone number?</strong></label>
+            <input type="tel" class="form-control" placeholder="Your phone number" minlength="6" pattern="[0-9+]*">
+            <small class="form-text text-muted">
+                If you enter your phone number, we can add you to our Whatsapp group. We won't use it to call you.
+            </small>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div class="invalid-feedback">
+                Please enter a valid phone number.
             </div>
         </div>
     </div>
