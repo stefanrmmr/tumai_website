@@ -59,7 +59,7 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col">
-                                    <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/logo/logo_round_transparent.png">
+                                    <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="logo/logo_round_transparent.png">
                                         <h5>Your contact at TUM.ai</h5>
                                         <p class="font-weight-light mb-0">Florian Mysliwetz<br>Arcisstraße 21, 80333 München<br>contact@tum-ai.com</p>
                                     </div>
@@ -243,11 +243,11 @@
                 <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
                     <div class="intro">
                         <h1 class="text-center"><strong>Convolutional</strong><br><strong>Neural Networks in keras</strong><br></h1>
-                        <p class="text-center"><span class="by">by</span> <a href="#">jakOb Kruse</a><span class="date">APRIL 21ST, 2020</span></p><img class="img-fluid" src="assets/img/desk.jpg"></div>
+                        <p class="text-center"><span class="by">by</span> <a href="https://www.linkedin.com/in/jakob-kruse-b7293a197/">jakOb Kruse</a><span class="date">APRIL 21ST, 2020</span></p><img class="img-fluid" src="assets/img/blog/blog-cnn/desk.jpg"></div>
                     <div class="text">
                         <p>Convolutional neural networks are a class of deep neural networks which are usually used for image analysis. They usually consist of convolutional, pooling and fully connected layers, which will all be explained in this article.
                             The layers are usually fully connected, which tends to lead to overfitting in larger networks. Therefore, additional regularization and normalization layers are often used to avoid this problem. <br><br>This article will explain
-                            the functionality of the different layers in convolutional neural networks and show a simple CNN implementation in the commonly used Python machine learning framework keras [1]. <br></p>
+                            the functionality of the different layers in convolutional neural networks and show a simple CNN implementation in the commonly used Python machine learning framework keras. <br></p>
                         <p></p>
                         <h2>1. Motivation</h2>
                         <p>A question that you might ask yourself is why we are using these special convolutional neural networks at all. Why not just use a normal neural network for the task of image classification?<br><br>There are several reasons for
@@ -278,7 +278,7 @@
     (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
   </code>
 </pre>
-                        <figure><img class="figure-img" src="assets/img/example_images.png">
+                        <figure><img class="figure-img" src="assets/img/blog/blog-cnn/example_images.png">
                             <figcaption>Example images from the mnist dataset</figcaption>
                         </figure>
                         <p>Now, the dataset should be preprocessed to be easily used by the keras package. We therefore convert the labels of the image to categorical labels. This converts our single label into a 10-element label vector which contains only
@@ -361,20 +361,20 @@ Epoch 10/10
                         <p>Convolutional neural networks are networks that use convolutional layers. These layers are the main reason why CNNs outperform NNs when it comes to image classification. Let us look at how these convolutional layers work.<br><br>Convolutional
                             layers consist of a set of filters, which are used to look at spatial areas of the image. For example, if we use a 28 x 28 x 3 image, we could use a 5 x 5 x 3 filter, which looks at a 5x5 pixel area of the image. The last dimension
                             of the filter is always equal to the last input dimension (the number of channels of the image).<br></p>
-                        <figure><img class="figure-img" src="assets/img/completefilter.png">
+                        <figure><img class="figure-img" src="assets/img/blog/blog-cnn/completefilter.png">
                             <figcaption>Convolutional layer visualization</figcaption>
                         </figure>
                         <p>The output of the convolutional layer is calculated by performing an element-wise multiplication<br>of the filter with the area of the image that the filter currently looks at. Then, the results of the multiplications are summed
                             up to create one of the outputs. Finally, the filter is moved one pixel (or multiple pixels, see later) to the right and the next output is calculated. This is done for all rows and columns so that the output is a 2D matrix.&nbsp;<br>(Output
                             dimension for the example above: (28-5+1) x (28-5+1) = 24 x 24).<br></p>
-                        <figure><img class="figure-img" src="assets/img/Untitled%20Diagram(1).png">
+                        <figure><img class="figure-img" src="assets/img/blog/blog-cnn/Untitled%20Diagram(1).png">
                             <figcaption>The spatial areas that the filter looks at for the first row of the output image (stride 1)</figcaption>
                         </figure>
                         <p>Normally, multiple filters are used in a convolutional layer, resulting in a 3-dimensional output of dimensions (outputDIM1 x outputDIM2 x numFilters).<br><br><strong><span style="text-decoration: underline;">Padding:</span> </strong>When
                             using a filter with a size of 2x2 or larger, the output dimension of the convolutional layer will always be smaller than the input dimension. To avoid that, we can use a technique called padding. This means that we add zeros
                             around the input of the convolutional layer to get an output that is larger. For example, if we use a 28x28 image with filter size 3 and a padding of 1 (this adds layer of zeros around the image), the output of the convolutional
                             layer will also be of dimension 28x28.<br>Note: In keras, we can specify padding=”same” to automatically add padding such that the output and input dimensions are the same.<br></p>
-                        <figure><img class="figure-img" src="assets/img/Untitled%20Diagram(2).png">
+                        <figure><img class="figure-img" src="assets/img/blog/blog-cnn/Untitled%20Diagram(2).png">
                             <figcaption>Padding of 1</figcaption>
                         </figure>
                         <p><strong><span style="text-decoration: underline;">Stride:</span></strong> The stride specifies the number of pixels that the filter is moved between the spatial areas that it looks at. If we use a stride of 2, the filter is moved
@@ -415,7 +415,7 @@ Epoch 10/10
                             are max, min and average. For example, a max-pooling layer chooses the maximum value from all its input values as output. The area that the pooling layer looks at is defined by the pool size. A pool size of 2 means that the
                             pooling operations look at a 2x2 area and the output dimensions are both halfed. For example, applying such a pooling layer to a 24x24 output of a convolutional layer results in a 12x12 pooling layer output. The number of channels
                             remains untouched by the pooling layer.<br></p>
-                        <figure><img class="figure-img" src="assets/img/pooling.png">
+                        <figure><img class="figure-img" src="assets/img/blog/blog-cnn/pooling.png">
                             <figcaption>Max Pooling Layer with pool size 2</figcaption>
                         </figure>
                         <p>Let's add pooling layers to our neural network and see the results.</p><script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
