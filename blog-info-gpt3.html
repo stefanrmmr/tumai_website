@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TUM.ai - Blog - CNNs in Keras</title>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tum-ai.com/assets/img/logo/Group28logo_large_no_border.png">
+    <meta name="description" content="This article wants to explain the functionality of the different layers in convolutional neural networks and show a simple CNN implementation in the commonly used python machine learning framework keras.">
+    <link rel="icon" type="image/png" sizes="800x800" href="assets/img/logo/Group%2014logo_small.png">
+    <link rel="icon" type="image/png" sizes="800x800" href="assets/img/logo/Group%2014logo_small.png">
+    <link rel="icon" type="image/png" sizes="800x800" href="assets/img/logo/Group%2014logo_small.png">
+    <link rel="icon" type="image/png" sizes="800x800" href="assets/img/logo/Group%2014logo_small.png">
+    <link rel="icon" type="image/png" sizes="800x800" href="assets/img/logo/Group%2014logo_small.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166440742-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166440742-1');
+</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg shadow navigation-clean-button sticky-top" style="font-family: Lato, sans-serif;background-color: #ffffff;opacity: 0.95;height: 65px;padding-top: 0px;padding-left: 12px;padding-bottom: 0px;">
+        <div class="container" style="background-color: transparent;"><a class="navbar-brand" style="padding: 0px;height: 65px;width: 180px;" href="/"><img src="assets/img/logo/Group28logo_large_no_border.svg" style="max-height: 100%;padding: 0px;margin-right: 0px;width: auto;height: 100%;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse text-center" id="navcol-1" style="background-color: #fff;opacity: 1;width: 100%;">
+                <ul class="navbar-nav ml-auto" style="color: #fcfeff;">
+                    <li class="nav-item"><a class="nav-link" href="activities" style="color: #191e20;font-family: Lato, sans-serif;font-weight: 800;padding: 12px 12px;font-size: 18px;">Activities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forStudents" style="color: #191e20;font-family: Lato, sans-serif;font-weight: 800;padding: 12px 12px;font-size: 18px;">For Students</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus" style="color: #191e20;font-family: Lato, sans-serif;font-weight: 800;padding: 12px 12px;font-size: 18px;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forPartners" style="color: #191e20;font-family: Lato, sans-serif;font-weight: 800;padding: 12px 12px;font-size: 18px;">For Partners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog" style="color: #191e20;font-family: Lato, sans-serif;font-weight: 800;padding: 8px 16px 12px 8px;padding-top: 12px;font-size: 18px;">Blog</a></li>
+                </ul><button class="btn btn-primary" data-toggle="modal" data-target="#modal1" type="button" style="margin: 5px 0px;font-family: Lato, sans-serif;font-size: 18px;background: rgb(0, 123, 255);">Contact</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Contact TUM.ai</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" src="assets/img/logo/Group28logo_large_no_border.svg">
+                                <h5>Your contact at TUM.ai</h5>
+                                <p class="font-weight-light mb-0">TUM.ai Operations Team<br>Arcisstraße 21, 80333 München<br>contact@tum-ai.com</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <form data-bss-recipient="43c9dff80f0b203240afd51702f87891"><form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label><strong>Name</strong></label>
+            <input type="text" class="form-control" placeholder="" required minlength="1">
+            <div class="invalid-feedback">
+                Please enter your name.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label><strong>Company</strong></label>
+            <input type="text" class="form-control" placeholder="">
+            <div class="invalid-feedback">
+                Please enter your companies name.
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label><strong>Email</strong></label>
+            <input type="email" class="form-control" placeholder="">
+            <div class="invalid-feedback">
+                Please enter your email address.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+                        <label><strong>Phone</strong></label>
+            <input type="text" class="form-control" placeholder="" required>
+            <div class="invalid-feedback">
+                Please enter your phone number.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-12 mb-3">
+            <label><strong>Message</strong></label>
+            <textarea class="form-control" placeholder="" required minlength="1"></textarea>
+            <div class="invalid-feedback">
+                Please enter a message.
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary align-right" type="submit">Submit</button>
+    
+</form>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script></form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-right" style="margin: 0px;padding-top: 10px;">By submission you accept our&nbsp;<a href="impressum" style="font-size: 16px;">Terms &amp; Conditions</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="article-clean">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                    <div class="intro">
+                        <h1 class="text-center" style="font-family: Lato, sans-serif;font-size: 32px;"><strong>AI based language models - the fundamentals and resulting opportunities</strong><br></h1>
+                        <p class="text-center"><span class="by" style="font-family: Lato, sans-serif;font-size: 12px;">by</span> <a href="https://tum-ai.com" style="font-family: Lato, sans-serif;font-size: 12px;">TUM.ai</a><span class="date" style="font-family: Lato, sans-serif;font-size: 12px;">MARCH 8TH, 2021</span></p>
+                    </div>
+                    <div class="text">
+                        <p style="font-family: Lato, sans-serif;font-size: 16px;">First off a bold statement: <strong><em>We want everybody to make use of AI and not AI to make use of everybody.</em></strong> <br><br>We at TUM.ai believe that understanding the basics of artificial intelligence is of high importance for everybody in today’s society. Therefore <strong><em>the following article aims at explaining the basics of AI models that work on natural language - specifically for non-experts</em></strong>. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>After you´ve read this article you´ll know the basics of <strong><em>the world’s most powerful AI model “GPT-3”</em></strong> and understand why the adoption of this artificial intelligence algorithm can create a lot of opportunities in various industries. Further <strong><em>we will explain how you personally can leverage this state of the art technology.</em></strong><br><br>If you want to jump straight ahead to <strong><em>real-world usecases and opportunities</em></strong> within the industry&nbsp;<span style="color: #007bff;font-size: 16px;"><strong>click here.</strong></span></p>
+                        <p></p>
+                        <h2 style="font-family: Lato, sans-serif;color: var(--blue);font-size: 20px;">Natural Language Processing in a nutshell</h2>
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;"><strong><em>Natural Language Processing</em></strong><em> </em><strong><em>(NLP)</em></strong> is a subfield of linguistics, computer science and AI concerned with processing and analysing <strong><em>human language</em></strong>. Imagine a Natural Language AI to be like a software program where text is inputed, processed in a specific way and then some sort of text is outputed (simplification). &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>An example of Natural Language AI in our everyday live is the prediction of the next word on many of our smartphone keyboards. There your written sentences are used by the model to suggest the next most likely word. Other typical NLP tasks include:<br></p>
+                        <ul style="margin-left: 22px;">
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em>Summarizing </em></strong>a text</li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px; font-weight: 300;"><strong><em>Translation</em></strong> from language A to language B (e.g. <strong><em>English to French</em></strong>, but also translating one programming language to another e.g. <strong><em>Java to Python</em></strong>)<br></li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px; font-weight: 300;"><strong><em>Classifying</em>&nbsp;<em>documents</em></strong>&nbsp;for example by<br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">political view</li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">sentiment (positive, neutral, or negative customer reference)<br></li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">spam within e-mail applications<br></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p style="font-family: Lato, sans-serif;font-size: 16px;">Before we introduce GPT-3, there are two important technical progressions that are important to mention. If you´re interested about that&nbsp;<span style="color: #007bff;font-size: 16px;" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button"><strong>click here.</strong></span></p>
+                    </div>
+                    <div id="collapse-1" class="collapse">
+                        <p style="font-family: Lato, sans-serif;font-size: 16px;">First, in December 2017 the so called <strong><em>transformer architecture</em></strong> was developed, which revolutionized how text can be processed by the computer and GPT-3 is based upon. Within the transformer architecture the <strong><em>model can learn</em></strong> <strong><em>context-sensitive-associations</em></strong> through a novel technology called <strong><em>attention&nbsp;</em></strong><span style="color: #007bff"><a href="https://arxiv.org/pdf/1706.03762.pdf" style="color: #007bff; font-size: 16px;"><strong>[Vaswani et al. (2017) Attention is all you need]</strong></a></span>. For example look at this senctence: <strong><em>“Steve eats an apple because it tastes good.”</em> </strong>Attention is measured by a value that indicates how relevant a word is in relation to another word. <strong>It </strong>and <strong>the apple </strong>refer to eachother and therefore represent one association.<br></p>
+                        <figure><img class="figure-img" src="assets/img/blog/blog-gpt3-info/image1.png"><figcaption style="font-family: Lato, sans-serif;font-size: 14px;"><em>Source:</em><a href="https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html" style="font-size: 14px"><em> [Uszkoreit (2017) Transformer: A novel neural network archtecture for language understanding, Google AI Blog]</em></a><br /></figcaption></figure>
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;">These <strong><em>attention based operations</em></strong> are not sequence dependent and <strong><em>can be computed in parallel</em></strong>. <br><br>This explains the superiority of the transformer architecture compared to previous methods, which weren´t able to run operations in parallel or incable of looking at the whole input text at once. Since transformer architecturses build an internal representation of language during trainging, they are often also called “language models”.&nbsp;&nbsp;&nbsp;&nbsp; <br><br>Second, in recent years, <strong><em>self-supervised learning</em></strong> was refined a lot: Language models were trained by first masking out (parts of) words and then <strong><em>predicting</em> </strong>these missing<strong> <em>words in different sentences</em></strong>.<br><strong>&nbsp;&nbsp;&nbsp;&nbsp; </strong><br>This leads to the concept of <strong><em>generative pre-trained transformers&nbsp;</em>(GPT)</strong>. This allowed researchers to achieve&nbsp; similar results without the need for hand-labeled data, which is expensive and time consuming to create. This was a <strong><em>major breakthrough</em></strong> because the <strong><em>availability and generation of&nbsp; sufficient hand-labeled data was often a hurdle</em></strong>, but text on the internet is near infinite.<br></p>
+                    </div>
+                    <div class="text">
+                        <p></p>
+                        <h2 style="font-family: Lato, sans-serif;color: var(--blue);font-size: 20px;">What's the deal with GPT-3 and what can it do?</h2>
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;"><strong><em>GPT-3 (generative-pretrained-performer 3)</em></strong> is a recent advancement in the field of artificial intelligence. <br><br>It performs equally or better on a<strong><em> variety of different tasks&nbsp;</em></strong>compared to the state of the art models in the respective fields (models that have been specifically trained for the respective task only). Building on their previous efforts (GPT-1 and GPT-2), <span style="color: #007bff"><a href="https://openai.com/blog/openai-api/" style="color: #007bff; font-size: 16px;"><strong>OpenAI</strong></a></span>&nbsp;released their beta version in the summer of 2020. While most other language models are designed for a single task, <strong><em>GPT-3 provides a general-purpose “text in, text out” interface</em></strong>, which makes it <strong><em>possible to apply it to virtually any language task</em></strong>. <br><br>Examples for the tasks that GPT-3 is able to take on include:<br></p>
+                        <ul style="margin-left: 22px;">
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em><span style="text-decoration: underline;">Summarization with different output</span></em></strong><br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Turn&nbsp;<span style="color: #007bff;"><strong><em>meeting notes</em></strong></span> <em>into&nbsp;</em>a<em>&nbsp;</em><span style="color: #007bff"><strong><em>summary.</em></strong></span><br></li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff"><strong><em>Summarize long articles&nbsp;</em></strong></span>by providing key concepts.<br></li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff"><strong><em>Create spreadsheets</em></strong></span> tables that <span style="color: #007bff"><strong><em>extract knowledge pieces from long texts</em></strong></span><em>&nbsp;</em>by specifying a structure and supplying some examples<br></li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Translate&nbsp;<span style="color: #007bff"><strong><em>difficult text into simpler texts</em></strong></span><em>&nbsp;</em>(e.g. for a 2nd grader)<br></li>
+                                </ul>
+                            </li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em><span style="text-decoration: underline;">Coding tasks</span></em></strong><br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Describe a user interface and&nbsp;<span style="color: #007bff;"><strong><em>get code that produces the desired interface right away</em></strong></span><br></li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Convert&nbsp;<span style="color: #007bff;"><strong><em>JavaScript to Python</em></strong></span><br></li>
+                                </ul>
+                            </li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em><span style="text-decoration: underline;">Classifying items into categories via example</span></em></strong><br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff;"><strong><em>Classify the sentiment</em></strong></span>&nbsp;(negative, neutral, positive)&nbsp;&nbsp;<span style="color: #007bff;"><strong><em>of short texts like posts and tweets</em></strong></span><br></li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff;"><strong><em>Classify the political view</em></strong></span>&nbsp;of certain articles</li>
+                                </ul>
+                            </li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em><span style="text-decoration: underline;">Creating longer texts on specific topics without much input</span></em></strong><br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff;"><strong><em>Create study</em></strong></span>&nbsp;notes on a given topic</li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Generate an&nbsp;<span style="color: #007bff;"><strong><em>outline for a specific research topic</em></strong></span>&nbsp;or essay</li>
+                                </ul>
+                            </li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em><span style="text-decoration: underline;">Generating multiple versions of creative texts to describe things</span></em></strong><br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff;"><strong><em>Generate an advertisement</em></strong></span>&nbsp;for a product description</li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff;"><strong><em>Propose product names</em></strong></span>&nbsp;for shortly described products</li>
+                                </ul>
+                            </li>
+                            <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;font-weight: 300;"><strong><em><span style="text-decoration: underline;">Answering universal questions</span></em></strong><br>
+                                <ul style="margin-left: 22px;">
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;"><span style="color: #007bff;"><strong><em>Answer universal questions</em></strong></span>&nbsp;</li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Provide&nbsp;<span style="color: #007bff;"><strong><em>company information</em></strong></span>&nbsp;for financial metrics</li>
+                                    <li style="font-family: Lato, sans-serif;color: rgb(84,84,84);font-size: 16px;">Facilitate a&nbsp;<span style="color: #007bff;"><strong><em>conversation</em></strong></span>&nbsp;with an AI assistant&nbsp;<span style="color: #007bff;"><strong><em>regarding various topics (chat-bot)</em></strong></span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;">Note that a lot of these tasks can be achieved by GPT-3 <strong><em>without or very little input</em>.</strong> <br><br>Given any text input or task you provide to GPT-3, the interface will return a text completion, attempting to match the pattern you gave it. <strong><em>You can easily “train” it by typing just a few examples of what you’d like it to do into the interface</em></strong>; its success generally varies depending on how complex the task is.<br></p>
+                    </div>
+                    <div class="text">
+                        <figure><img class="figure-img" src="assets/img/blog/blog-gpt3-info/Bild2.png"></figure>
+                        <figure><img class="figure-img" src="assets/img/blog/blog-gpt3-info/Bild3.png">
+                            <figcaption style="font-family: Lato, sans-serif;font-size: 14px;"><em>Source:</em><a href="https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html"><em>&nbsp;</em></a><em>[OpenAI (2020) OpenAI API]</em><br></figcaption>
+                        </figure>
+                    </div>
+                    <div class="text">
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;">In <span style="color: #007bff;"><strong>the following video</strong></span> you can observe an example for the&nbsp;<span style="color: #007bff;"><strong>the creation of an essay outline about Walt Disney.</strong></span>&nbsp;The bold text in the video is the input provided to the model.<br></p><video width="720" height="480" controls>
+  <source src="assets/videos/video2_advertisement.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;">Another capacity of the user interface is that <strong><em>parameters can be adjusted to better serve the purpose of the current task</em></strong>. Figuratively speaking, it can even be configured to <strong>provide more diverse output</strong>, which can be quite handy to brainstorm texts with a creative purpose (<span style="color: #007bff;font-size: 16px;" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-2" href="#collapse-2" role="button"><strong>click here</strong></span>&nbsp;to understand how that works).<br></p>
+                    </div>
+                    <div id="collapse-2" class="collapse">
+                        <p style="font-family: Lato, sans-serif;font-size: 16px;">This can be done by increasing the so called “temperature” parameter. A high temperature value means the model will brainstorm by providing various outputs that differ more to eachother compared to a very deterministic answer that would be achieved by a low “temperature”<br></p>
+                    </div>
+                    <div class="text">
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;">For example,&nbsp;<span style="color: #007bff;"><strong>in the following video</strong></span>&nbsp;this approach has been pursued to obtain a&nbsp;<span style="color: #007bff;"><strong>short advertising text.</strong></span>&nbsp;<br></p><video width="720" height="480" controls>
+  <source src="assets/videos/video1_essay.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video> 
+                        <p style="font-family: Lato, sans-serif;color: rgb(84, 84, 84);font-size: 16px;"><br>One of the most practical advantages of GPT-3 is its ability to <strong><em>generate valid text output</em></strong> with a <strong><em>multitask interface</em></strong>, by using <strong><em>very little or no input data</em></strong>. <br><br>To summarize, the main benefits of GPT-3 in simple terms are that <strong><em>it has been trained on a very large part of the internet</em></strong>, it can be used as a <strong><em>general-purpose out-of-the-box model</em></strong> for a vast range of different tasks and it can be very <strong>easily taught to learn another task&nbsp;</strong>by showing it simple examples <strong><em>without the need to write a single line of code</em></strong>.<br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic" style="background-color: #000;margin-top: 40px;padding: 40px;">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#modal1" style="font-family: Lato, sans-serif;font-size: 20px;">Contact</a></li>
+                <li class="list-inline-item"><a href="impressum" style="font-family: Lato, sans-serif;font-size: 20px;">Impressum</a></li>
+                <li class="list-inline-item"><a href="datenschutz" style="font-family: Lato, sans-serif;font-size: 20px;">Datenschutz</a></li>
+            </ul>
+        </footer>
+        <p class="copyright" style="font-family: Lato, sans-serif;">TUM.ai © 2020</p>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
