@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bf67e08-a1a8-419b-acbb-fd5cdd812d29" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/videos/gpt3makeathon_tumai.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/assets/videos/gpt3makeathon_tumai.mp4" afterDir="false" />
-    </list>
+    <list default="true" id="7bf67e08-a1a8-419b-acbb-fd5cdd812d29" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615466193817</updated>
-      <workItem from="1615466195934" duration="857000" />
+      <workItem from="1615466195934" duration="1451000" />
     </task>
     <servers />
   </component>
