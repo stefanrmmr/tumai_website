@@ -1,0 +1,66 @@
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+}
+
+.fa-calendar-alt {
+  margin-right: 2%;
+  color: white;
+  font-size: 20px;
+}
+
+.nav-link .active {
+  background-color: black!important;
+}
+
+.tile {
+  width: 80%;
+  min-height: 270px;
+  margin: 60px auto;
+}
+
+#tile-1 .tab-pane {
+  padding: 15px;
+  height: 80px;
+}
+
+#tile-1 .nav-tabs {
+  position: relative;
+  border: none!important;
+  border-radius: 6px;
+}
+
+#tile-1 .nav-tabs li {
+  margin: 0px!important;
+}
+
+#tile-1 .nav-tabs li a {
+  position: relative;
+  margin-right: 0px!important;
+  padding: 20px 40px!important;
+  font-size: 16px;
+  border: none!important;
+  color: white;
+}
+
+#tile-1 .nav-tabs a:hover {
+  border: none;
+  color: #e37544;
+}
+
+#tile-1 .slider {
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #e37544;
+  position: absolute;
+  z-index: 1200;
+  bottom: 0;
+  transition: all .4s linear;
+}
+
+#tile-1 .nav-tabs .active-tab {
+  border: none!important;
+  color: #e37544!important;
+}
+

@@ -1,0 +1,10 @@
+.event-container {
+  float: left;
+}
+
+.event-box {
+  background-color: white;
+  border-radius: 15px;
+  min-height: 200px;
+}
+

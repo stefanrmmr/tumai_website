@@ -1,0 +1,35 @@
+.accordion {
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+  padding: 9px 16px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-top: 10px;
+  font-family: 'Lato';
+}
+
+.fa-plus-circle, .fa-minus-circle {
+  margin-left: 2%;
+}
+
+.active-accordion, .accordion:hover {
+  background-color: #e37544;
+  color: white;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-top: 1%;
+}
+

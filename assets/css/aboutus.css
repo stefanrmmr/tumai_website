@@ -1,0 +1,31 @@
+@media (min-width: 988px) {
+  #intro-p-column {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 800px) {
+  #about-us-header {
+    min-height: 92vh;
+  }
+}
+
+@media (max-width: 800px) {
+  #about-us-header {
+    min-height: 50vh;
+  }
+}
+
+.team-boxed .item .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: d0d0d0;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+:target {
+  padding-top: 70px;
+  margin-top: -70px;
+}
+

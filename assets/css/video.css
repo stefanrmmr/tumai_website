@@ -1,0 +1,74 @@
+.action-button-wrapper {
+  margin-top: 2%;
+}
+
+.fa-play-circle, .fa-pause-circle {
+  font-size: 45px;
+  transition: transform .2s;
+}
+
+.fa-play-circle:hover, .fa-pause-circle:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.hackathon-teaser-wrapper {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hackathon-teaser-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hackathon-teaser-wrapper iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hackathon-teaser-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hackathon-teaser-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .hackathon-teaser-wrapper video {
+    display: none;
+  }
+}
+

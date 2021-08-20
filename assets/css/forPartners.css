@@ -1,0 +1,12 @@
+@media (min-width: 800px) {
+  #for-partners-header {
+    min-height: 92vh;
+  }
+}
+
+@media (max-width: 800px) {
+  #for-partners-header {
+    min-height: 50vh;
+  }
+}
+
