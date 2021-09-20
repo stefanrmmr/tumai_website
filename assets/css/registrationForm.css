@@ -9,7 +9,7 @@
 /* Mark input boxes that gets an error on validation: */
 
 input.invalid {
-  background-color: #ffdddd;
+  background-color: #ffffff;
 }
 
 /* Hide all steps by default: */
@@ -19,7 +19,7 @@ input.invalid {
 }
 
 button {
-  background-color: #e37544;
+  background-color: #45b69c;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -56,6 +56,6 @@ button:hover {
 /* Mark the steps that are finished and valid: */
 
 .step.finish {
-  background-color: #e37544;
+  background-color: #45b69c;
 }
 

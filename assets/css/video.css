@@ -14,8 +14,8 @@
 
 .hackathon-teaser-wrapper {
   position: relative;
-  background-color: black;
-  height: 75vh;
+  background-color: rgb(11,11,11);
+  height: 65vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;

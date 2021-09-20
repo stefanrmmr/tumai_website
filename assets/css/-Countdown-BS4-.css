@@ -1,0 +1,20 @@
+p.number-days, p.number-hours, p.number-minutes, p.number-seconds {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+p.text-countdown {
+  font-size: 1.5rem;
+}
+
+.boxed-countdown p.number-days, .boxed-countdown p.number-hours, .boxed-countdown p.number-minutes, .boxed-countdown p.number-seconds {
+  padding: 2rem 0;
+  background: rgba(0,0,0,.2);
+}
+
+.boxed-countdown p.text-countdown {
+  padding: .5rem 0 .6rem;
+  background: rgba(255,255,255,.2);
+  margin: 0;
+}
+
