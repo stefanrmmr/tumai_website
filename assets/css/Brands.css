@@ -1,12 +1,12 @@
 .brands {
-  color: #313437;
+  color: rgb(11,11,11);
   background-color: #fff;
 }
 
 .brands a {
   display: block;
   text-align: center;
-  padding: 40px 0;
+  padding: 0px 0;
 }
 
 @media (max-width:767px) {

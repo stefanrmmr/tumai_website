@@ -1,0 +1,33 @@
+.beautiful.bs-callout {
+  padding: 15px 30px 15px 15px;
+  margin: 20px 0;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-radius: 0px;
+}
+
+.beautiful.bs-callout p:last-child {
+  font-size: 13px;
+  margin: 0px;
+}
+
+.beautiful.bs-callout + .beautiful.bs-callout {
+  margin-top: -5px;
+}
+
+.beautiful.bs-callout-warning {
+  background-color: #faeaa9;
+  border-left-color: #f3cc31;
+  color: #000;
+}
+
+.beautiful.bs-callout-warning h4 {
+  color: #aa6708;
+}
+
+.beautiful h4 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+

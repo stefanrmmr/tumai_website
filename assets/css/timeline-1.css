@@ -9,7 +9,7 @@
 }
 
 .experience h5 {
-  color: #e37544;
+  color: #45b69c;
   font-size: 30px;
   /*text-transform: uppercase;*/
 }
@@ -28,7 +28,7 @@
 }
 
 .experience .fa {
-  color: #e37544;
+  color: #45b69c;
   font-size: 35px;
 }
 
@@ -94,7 +94,7 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #e37544;
+  background-color: #45b69c;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -147,8 +147,8 @@
 }
 
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #e37544;
-  border-color: #e37544;
+  background-color: #45b69c;
+  border-color: #45b69c;
 }
 
 .cd-horizontal-timeline .events a.selected {
@@ -156,12 +156,12 @@
 }
 
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #e37544;
-  border-color: #e37544;
+  background-color: #45b69c;
+  border-color: #45b69c;
 }
 
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #e37544;
+  border-color: #45b69c;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -230,7 +230,7 @@
 }
 
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #e37544;
+  border-color: #45b69c;
 }
 
 .cd-timeline-navigation a.inactive {

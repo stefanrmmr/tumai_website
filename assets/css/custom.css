@@ -207,7 +207,7 @@ li {
 }
 
 .why-us-box .item:hover {
-  color: #e37544;
+  color: #45b69c;
   transform: scale(1.2);
 }
 
@@ -396,20 +396,20 @@ html {
 }
 
 .registration-select-item:hover .fa {
-  color: #e37544;
+  color: #45b69c;
 }
 
 .registration-select-items .selected {
-  color: #e37544;
+  color: #45b69c;
 }
 
 .active-registration-tab h4 {
   font-weight: bold;
-  color: #e37544;
+  color: #45b69c;
 }
 
 .active-registration-tab {
-  border-bottom: 5px solid #e37544;
+  border-bottom: 5px solid #45b69c;
 }
 
 .nav-tabs li {
