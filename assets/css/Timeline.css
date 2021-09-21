@@ -86,7 +86,7 @@ section#section-timeline h3.section-subheading {
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #fed136;
+  background-color: #45b69c;
   color: #fff;
   border-radius: 100%;
   border: 7px solid #f1f1f1;
@@ -247,5 +247,8 @@ section#section-timeline h3.section-subheading {
   margin-bottom: 0;
   background-color: inherit;
   border: none;
+}
+
+.zoomOnHover.info-box-item.card {
 }
 

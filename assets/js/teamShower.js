@@ -78,7 +78,7 @@ let departments = ["Management", "Makeathon", "Venture", "Industry", "Education"
 let active = 0;
 
 function team_button_pressed(value) {
-    document.getElementById("department_button_" + active).style.backgroundColor = "#86c0ff";
+    document.getElementById("department_button_" + active).style.backgroundColor = "#45b69c";
     active = value;
     document.getElementById("department_button_" + active).style.backgroundColor = "#007bff";
 
