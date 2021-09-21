@@ -29,7 +29,7 @@ body {
   width: 100%;
   font-family: 'Mukta', sans-serif;
   color: #rgb(11,11,11);
-  background: #000000;
+  background: rgb(11,11,11);
 }
 
 .container-fc {
