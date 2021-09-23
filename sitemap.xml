@@ -4,9 +4,6 @@
         <loc>https://tum-ai.com/aboutus.html</loc>
     </url>
     <url>
-        <loc>https://tum-ai.com/activities.html</loc>
-    </url>
-    <url>
         <loc>https://tum-ai.com/blog.html</loc>
     </url>
     <url>
@@ -37,12 +34,15 @@
         <loc>https://tum-ai.com/joinus.html</loc>
     </url>
     <url>
-        <loc>https://tum-ai.com/makeathon_ss21_gpt3.html</loc>
+        <loc>https://tum-ai.com/makeathon.html</loc>
     </url>
     <url>
-        <loc>https://tum-ai.com/makeathon_ws21_os.html</loc>
+        <loc>https://tum-ai.com/makeathon-gpt3.html</loc>
     </url>
     <url>
         <loc>https://tum-ai.com/newsletter.html</loc>
+    </url>
+    <url>
+        <loc>https://tum-ai.com/projects.html</loc>
     </url>
 </urlset>
