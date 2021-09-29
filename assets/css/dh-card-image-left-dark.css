@@ -41,6 +41,7 @@
 @media screen and (min-width: 700px) {
   .photo-details {
     width: 50%;
+    /*border-top-left-radius: 10;*/
   }
 }
 

@@ -46,7 +46,7 @@ let all_members = [
 	{name: "Martin Ganahl", department: "Partners & Sponsors", management: "0", studies: "M.Sc Electrical Engineering", image: "martin_ganahl.webp", description: "Waiting for AI to steal my job", linkedin: "https://www.linkedin.com/in/martin-ganahl-78a17014b/", },
 	{name: "Max Prokopp", department: "Marketing & PR", management: "0", studies: "M.Sc Business Administration", image: "max_prokopp.webp", description: "", linkedin: "", },
 	{name: "Maximilian Forstenhäusler", department: "IT & Infrastructure", management: "0", studies: "M.Sc Robitics, Coginition, Intelligence", image: "maximilian_forstenhaeusler.webp", description: "Enthusiastic about applied ML and DL", linkedin: "https://www.linkedin.com/in/maximilian-forstenhaeusler/", },
-	{name: "Mohammed Kamran", department: "Education", management: "0", studies: "M.Sc Informatics", image: "person.webp", description: "", linkedin: "", },
+	{name: "Mohammed Kamran", department: "Education", management: "0", studies: "M.Sc Informatics", image: "mohammed_kamran.webp", description: "", linkedin: "", },
 	{name: "Mohd Toaha Umar", department: "Community", management: "Teamlead", studies: "M.Sc Communications Engineering", image: "mohd_toaha_umar.webp", description: "", linkedin: "", },
 	{name: "Narine Harutyunyan", department: "Makeathon", management: "0", studies: "M.Sc Consumer Science", image: "narine_harutyunyan.webp", description: "", linkedin: "", },
 	{name: "Nejira Hadzalic", department: "Makeathon", management: "0", studies: "M.Sc Electrical Engineering", image: "nejira_hadzalic.webp", description: "Passionate about future ML applications", linkedin: "https://www.linkedin.com/in/nejira-hadzalic-595863181/", },
