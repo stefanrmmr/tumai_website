@@ -68,7 +68,7 @@ let all_members = [
 	{name: "Stefan Rummer", department: "IT & Infrastructure", management: "Teamlead", studies: "B.Sc Electrical Engineering", image: "stefan_rummer.webp", description: "Enthusiastic about deep learning and predictive modeling", linkedin: "https://www.linkedin.com/in/stefanrmmr/", },
 	{name: "Stefanie Manger", department: "Marketing & PR", management: "Teamlead", studies: "B.Sc Informatics", image: "stefanie_manger.webp", description: "Open minded and enthusiastic team player, always striving for the best", linkedin: "https://www.linkedin.com/in/stefanie-manger-29456b20b", },
 	{name: "Syed Husain Mustafa", department: "Education", management: "0", studies: "M.Sc Informatics", image: "person.webp", description: "", linkedin: "", },
-	{name: "Tara Gürel", department: "Legal & Finance", management: "0", studies: "B.Sc Management & Technology", image: "person.webp", description: "", linkedin: "", },
+	{name: "Tara Gürel", department: "Legal & Finance", management: "0", studies: "B.Sc Management & Technology", image: "tara_gürel.webp", description: "", linkedin: "", },
 	{name: "Tarak Amouri", department: "Community", management: "0", studies: "B.Sc Mathematics", image: "person.webp", description: "", linkedin: "", },
 	{name: "Tim Tomov", department: "Education", management: "0", studies: "B.Sc Information Systems", image: "tim_tomov.webp", description: "", linkedin: "", },
 	{name: "Tom Dörr", department: "IT & Infrastructure", management: "0", studies: "M.Sc Informatics", image: "tom_doerr.webp", description: "Interested in RL and adversarial examples", linkedin: "https://www.linkedin.com/in/tom-d%C3%B6rr-912607126/", },
