@@ -33,7 +33,7 @@ p {
 
 @media (max-width:767px) {
   p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     z-index: 1;
     text-align: center;
