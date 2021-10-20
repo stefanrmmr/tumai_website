@@ -1,7 +1,9 @@
 let all_members = [
     {name: "Jakob Kruse", department: "IT & Infrastructure", management: "President, Mentor, Teamlead", studies: "M.Sc Electrical Engineering", image: "jakob_kruse.webp", description: "Focus on Software Engineering and AI", linkedin: "https://www.linkedin.com/in/jakob-kruse-b7293a197/", },
+    {name: "Jakob Kruse", department: "Founders", management: "0", studies: "M.Sc Electrical Engineering", image: "jakob_kruse.webp", description: "Focus on Software Engineering and AI", linkedin: "https://www.linkedin.com/in/jakob-kruse-b7293a197/", },
     {name: "Tobias Zeulner", department: "Makeathon", management: "President, Mentor", studies: "M.Sc Robitics, Coginition, Intelligence", image: "tobias_zeulner.webp", description: "Passion for leadership in a tech-oriented environment", linkedin: "https://www.linkedin.com/in/tobias-zeulner-893080169/", },
     {name: "Nicolas Remerscheid", department: "Community", management: "President, Mentor", studies: "M.Sc Data Engineering and Analytics", image: "nicolas_remerscheid.webp", description: "Privacy Preserving ML Enthusiast", linkedin: "https://www.linkedin.com/in/nicolas-remerscheid/", },
+    {name: "Nicolas Remerscheid", department: "Founders", management: "0", studies: "M.Sc Data Engineering and Analytics", image: "nicolas_remerscheid.webp", description: "Privacy Preserving ML Enthusiast", linkedin: "https://www.linkedin.com/in/nicolas-remerscheid/", },
 	{name: "Abdullah Al-Hatem", department: "Partners & Sponsors", management: "0", studies: "M.Sc Robitics, Coginition, Intelligence", image: "abdullah_alhatem.webp", description: "Internet of Things Enthusiast", linkedin: "https://www.linkedin.com/in/abhatem/", },
 	{name: "Abhinav Krishnan ", department: "Marketing & PR", management: "0", studies: "M.Sc Aerospace,ESPACE", image: "abhinav_krishnan.webp", description: "", linkedin: "", },
 	{name: "Adam Misik", department: "Makeathon", management: "0", studies: "M.Sc Electrical Engineering", image: "adam_misik.webp", description: "", linkedin: "", },
@@ -26,6 +28,7 @@ let all_members = [
 	{name: "Fabius Sasse", department: "Community", management: "0", studies: "M.Sc Management & Technology", image: "fabius_sasse.webp", description: "At the intersection of VC, Startups and AI", linkedin: "https://www.linkedin.com/in/fabius-sasse/", },
 	{name: "Ferdinand Eberding", department: "Legal & Finance", management: "Teamlead", studies: "M.Sc Robitics, Coginition, Intelligence", image: "ferdinand_eberding.webp", description: "Open minded, technical student that wants to make an impact.", linkedin: "", },
 	{name: "Flora Geske ", department: "Partners & Sponsors", management: "0", studies: "M.Sc Finance & Information Management", image: "flora_geske.webp", description: "", linkedin: "", },
+    {name: "Florian Mysliwetz", department: "Founders", management: "0", studies: "Co-Founder @ PatentPlus", image: "florian_mysliwetz.webp", description: "", linkedin: "https://www.linkedin.com/in/florian-mysliwetz-bb98b015a/", },
 	{name: "Hai Dang", department: "Community", management: "0", studies: "PhD Human Computer Interaction", image: "hai_dang.webp", description: "", linkedin: "", },
 	{name: "Hendrik Maier", department: "Venture", management: "0", studies: "M.Sc Management & Technology", image: "person.webp", description: "", linkedin: "", },
 	{name: "Iana Makhonina", department: "Industry", management: "0", studies: "B.Sc Computational Linguistics,Informatics", image: "iana_makhonina.webp", description: "Excited about teaching AI to fully get my sarcastic jokes", linkedin: "https://www.linkedin.com/in/iana-makhonina-110748200/", },
@@ -50,6 +53,7 @@ let all_members = [
 	{name: "Mohd Toaha Umar", department: "Community", management: "Teamlead", studies: "M.Sc Communications Engineering", image: "mohd_toaha_umar.webp", description: "", linkedin: "", },
 	{name: "Narine Harutyunyan", department: "Makeathon", management: "0", studies: "M.Sc Consumer Science", image: "narine_harutyunyan.webp", description: "", linkedin: "", },
 	{name: "Nejira Hadzalic", department: "Makeathon", management: "0", studies: "M.Sc Electrical Engineering", image: "nejira_hadzalic.webp", description: "Passionate about future ML applications", linkedin: "https://www.linkedin.com/in/nejira-hadzalic-595863181/", },
+    {name: "Nico Henning", department: "Founders", management: "0", studies: "Venture Development @ Alaiko", image: "nico_henning.webp", description: "", linkedin: "https://www.linkedin.com/in/nicohenning/", },
 	{name: "Nico Hermann", department: "Industry", management: "0", studies: "M.Sc Robitics, Coginition, Intelligence", image: "nico_hermann.webp", description: "", linkedin: "", },
 	{name: "Nicolas Seppich", department: "Industry", management: "0", studies: "M.Sc Robitics, Coginition, Intelligence", image: "nicolas_seppich.webp", description: "", linkedin: "", },
 	{name: "Nikita Makarov", department: "Community", management: "0", studies: "M.Sc Data Engineering and Analytics", image: "person.webp", description: "", linkedin: "", },
@@ -64,6 +68,7 @@ let all_members = [
 	{name: "Rafi Al Attrach", department: "Community", management: "Teamlead", studies: "B.Sc Information Systems", image: "rafi_attrach.webp", description: "Sitting at the intersection of IT & Business", linkedin: "https://www.linkedin.com/in/rafi-attrach-ab2a2b196/", },
 	{name: "Richard Gaus", department: "Industry", management: "Teamlead", studies: "M.D. Informatics,Medicine", image: "richard_gaus.webp", description: "Passionate about the potential of AI to improve human physical and mental health", linkedin: "https://www.linkedin.com/in/richardgaus/", },
 	{name: "Sebastian Lettner", department: "Legal & Finance", management: "Mentor", studies: "M.Sc Electrical Engineering", image: "sebastian_lettner.webp", description: "", linkedin: "", },
+    {name: "Sebastian Lettner", department: "Founders", management: "0", studies: "M.Sc Electrical Engineering", image: "sebastian_lettner.webp", description: "", linkedin: "", },
 	{name: "Shahbaz Khan", department: "IT & Infrastructure", management: "0", studies: "M.Sc Informatics", image: "shahbaz_khan.webp", description: "", linkedin: "", },
 	{name: "Stefan Rummer", department: "IT & Infrastructure", management: "Teamlead", studies: "B.Sc Electrical Engineering", image: "stefan_rummer.webp", description: "Enthusiastic about deep learning and predictive modeling", linkedin: "https://www.linkedin.com/in/stefanrmmr/", },
 	{name: "Stefanie Manger", department: "Marketing & PR", management: "Teamlead", studies: "B.Sc Informatics", image: "stefanie_manger.webp", description: "Open minded and enthusiastic team player, always striving for the best", linkedin: "https://www.linkedin.com/in/stefanie-manger-29456b20b", },
@@ -75,9 +80,10 @@ let all_members = [
 	{name: "Umar Muhammad", department: "Venture", management: "Mentor", studies: "M.Sc Applied and Engineering Physics", image: "muhammad_umar.webp", description: "", linkedin: "", },
 	{name: "Viktoria Harmel", department: "Industry", management: "0", studies: "B.Sc Management & Technology", image: "viktoria_harmel.webp", description: "Passion for AI applications having knowledge on different business use cases", linkedin: "", },
 	{name: "Wei Herng Choong", department: "Community", management: "0", studies: "M.Sc Electrical Engineering", image: "weiherng_choong.webp", description: "Focus on DL in Computer Vision and NLP", linkedin: "https://www.linkedin.com/in/weiherng/", },
+    {name: "TUM.ai FOUNDED in 2019", department: "Founders", management: "0", studies: "Pushing AI into new domains!", image: "est2019.webp", description: "Follow US on LinkedIn!", linkedin: "https://www.linkedin.com/company/tum-ai/", },
 ];
 
-let departments = ["Management", "Makeathon", "Venture", "Industry", "Education", "IT & Infrastructure", "Legal & Finance", "Community", "Marketing & PR", "Partners & Sponsors"];
+let departments = ["Management", "Founders", "Makeathon", "Venture", "Industry", "Education", "IT & Infrastructure", "Legal & Finance", "Community", "Marketing & PR", "Partners & Sponsors"];
 let active = 0;
 
 function team_button_pressed(value) {
