@@ -87,9 +87,9 @@ let departments = ["Management", "Founders", "Makeathon", "Venture", "Industry",
 let active = 0;
 
 function team_button_pressed(value) {
-    document.getElementById("department_button_" + active).style.backgroundColor = "#45b69c";
+    document.getElementById("department_button_" + active).style.backgroundColor = "#474747";
     active = value;
-    document.getElementById("department_button_" + active).style.backgroundColor = "#007bff";
+    document.getElementById("department_button_" + active).style.backgroundColor = "#6812f4";
 
     team_area(value);
 }
