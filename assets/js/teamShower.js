@@ -13,7 +13,6 @@ let all_members = [
 	{name: "Alisha Riecker", department: "Community", management: "0", studies: "M.Sc Mathematics in Data Science", image: "alisha_riecker.webp", description: "", linkedin: "", },
 	{name: "Andreas Döring", department: "Education", management: "Mentor Education", studies: "M.Sc Robitics, Coginition, Intelligence", image: "andreas_doering.webp", description: "Robotics & Vision", linkedin: "https://www.linkedin.com/in/andreas-doering", },
 	{name: "Anna Masiuta", department: "Industry", management: "0", studies: "B.Sc Computational Linguistics", image: "anna_masiuta.webp", description: "Efficient", linkedin: "https://www.linkedin.com/in/anna-masiuta-786210198/", },
-	{name: "Anna Mrosik", department: "IT & Infrastructure", management: "0", studies: "M.Sc Electrical Engineering", image: "anna_mrosik.webp", description: "", linkedin: "", },
 	{name: "Arturo Guridi", department: "Community", management: "0", studies: "M.Sc Mechatronics & Robotics", image: "arturo_guridi.webp", description: "", linkedin: "", },
 	{name: "Camilo Requena Witzig", department: "Marketing & PR", management: "0", studies: "M.Sc Robitics, Coginition, Intelligence", image: "camilo_requena_witzig.webp", description: "", linkedin: "", },
 	{name: "Christian Wallenwein", department: "Venture", management: "0", studies: "B.Sc Informatics", image: "christian_wallenwein.webp", description: "", linkedin: "", },
