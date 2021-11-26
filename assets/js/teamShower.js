@@ -51,8 +51,7 @@ let all_members = [
 	{name: "Arturo Guridi", department: "Community", management: "Active member", studies: "M.Sc Mechatronics & Robotics", image: "arturo_guridi.webp", description: "", linkedin: "", },
 	{name: "Camilo Requena Witzig", department: "Marketing & PR", management: "Active member", studies: "M.Sc Robitics, Coginition, Intelligence", image: "camilo_requena_witzig.webp", description: "", linkedin: "", },
 	{name: "Christoph Jasper", department: "Education", management: "Active member", studies: "M.Sc Management & Technology", image: "christoph_jasper.webp", description: "Interested in generative ML and untapped markets", linkedin: "https://www.linkedin.com/in/christoph-jasper-1a9255151", },
-	{name: "Claudius Seitz", department: "Makeathon", management: "Active member", studies: "B.Sc Informatics", image: "claudius_seitz.webp", description: "", linkedin: "", },
-	{name: "Daniel Grittner", department: "Venture", management: "Active member", studies: "B.Sc Informatics", image: "daniel_grittner.webp", description: "Passionate about Tech and Entrepreneurship", linkedin: "https://www.linkedin.com/in/daniel-m-grittner/", },
+	{name: "Daniel Grittner", department: "IT & Infrastructure", management: "Active member", studies: "B.Sc Informatics", image: "daniel_grittner.webp", description: "Passionate about Tech and Entrepreneurship", linkedin: "https://www.linkedin.com/in/daniel-m-grittner/", },
 	{name: "Emily Eppinger", department: "Venture", management: "Active member", studies: "B.Sc Medicine", image: "emily_eppinger.webp", description: "", linkedin: "", },
 	{name: "Fabian Schaumann", department: "Makeathon", management: "Active member", studies: "M.Sc Business Administration", image: "fabian_schaumann.webp", description: "", linkedin: "", },
 	{name: "Fabius Sasse", department: "Community", management: "Active member", studies: "M.Sc Management & Technology", image: "fabius_sasse.webp", description: "At the intersection of VC, Startups and AI", linkedin: "https://www.linkedin.com/in/fabius-sasse/", },
@@ -96,6 +95,8 @@ let all_members = [
     //{name: "Omar Eladawy", department: "Education", management: "Active member", studies: "M.Sc Robitics, Coginition, Intelligence", image: "omar_eladawy.webp", description: "", linkedin: "https://www.linkedin.com/in/omareladawy/", },
     //{name: "Tim Tomov", department: "Education", management: "Active member", studies: "B.Sc Information Systems", image: "tim_tomov.webp", description: "", linkedin: "", },
     //{name: "Umar Muhammad", department: "Venture", management: "Active member", studies: "M.Sc Applied and Engineering Physics", image: "muhammad_umar.webp", description: "", linkedin: "", },
+    //{name: "Claudius Seitz", department: "Makeathon", management: "Active member", studies: "B.Sc Informatics", image: "claudius_seitz.webp", description: "", linkedin: "", },
+	
 	
 ];
 
