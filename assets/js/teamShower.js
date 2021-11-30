@@ -65,7 +65,7 @@ let all_members = [
     {name: "Deepak Raj Gopal Gnanasekaran", department: "Education", management: "Active member", studies: "", image: "person.webp", description: "", linkedin: "", },
 	{name: "Emily Eppinger", department: "Venture", management: "Active member", studies: "B.Sc Medicine", image: "emily_eppinger.webp", description: "", linkedin: "", },
     {name: "Fabian Englbrecht", department: "Education", management: "Active member", studies: "", image: "person.webp", description: "", linkedin: "", },
-	{name: "Fabian Schaumann", department: "Education", management: "Active member", studies: "M.Sc Business Administration", image: "fabian_schaumann.webp", description: "", linkedin: "", },
+	{name: "Fabian Schaumann", department: "Education", management: "Active member", studies: "M.Sc Business Administration", image: "fabian_schaumann.webp", description: "", linkedin: "https://www.linkedin.com/in/fabian-schaumann/", },
 	{name: "Fabius Sasse", department: "Venture", management: "Active member", studies: "M.Sc Management & Technology", image: "fabius_sasse.webp", description: "At the intersection of VC, Startups and AI", linkedin: "https://www.linkedin.com/in/fabius-sasse/", },
     {name: "Fabian Klövekorn", department: "Venture", management: "Active member", studies: "", image: "person.webp", description: "", linkedin: "", },
     {name: "Felix Dietrich", department: "Legal & Finance", management: "Active member", studies: "", image: "person.webp", description: "", linkedin: "", },
