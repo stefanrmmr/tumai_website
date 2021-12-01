@@ -15,9 +15,9 @@ let all_members = [
     
     // TEAMLEADS
     {name: "Alexander Schwarz", department: "Partners & Sponsors", management: "Teamlead Partners & Sponsors", studies: "M.Sc Robitics, Coginition, Intelligence", image: "alexander_schwarz.webp", description: "Passionate about innovations through AI", linkedin: "https://www.linkedin.com/in/alxschwrz", },
-    {name: "Armin Schöpf", department: "Makeathon", management: "Teamlead Makeathon", studies: "", image: "person.webp", description: "", linkedin: "", },
+    {name: "Armin Schöpf", department: "Makeathon", management: "Teamlead Makeathon", studies: "", image: "armin_schöpf.webp", description: "", linkedin: "https://www.linkedin.com/in/schoepfarmin/", },
     {name: "Christoph Kecht", department: "Legal & Finance", management: "Teamlead Legal & Finance", studies: "M.Sc Finance & Information Management", image: "christoph_kecht.webp", description: "Passionate about AI-based Information Systems", linkedin: "https://www.linkedin.com/in/christoph-kecht/", },
-    {name: "David Podolskyi", department: "Industry", management: "Teamlead Industry", studies: "B.Sc Information Systems", image: "david_podolskyi.webp", description: "", linkedin: "", },
+    {name: "David Podolskyi", department: "Industry", management: "Teamlead Industry", studies: "B.Sc Information Systems", image: "david_podolskyi.webp", description: "ML & Entrepreneurship enthusiast with focus on IoT and Recommender Systems", linkedin: "https://www.linkedin.com/in/davidpodolsky/", },
     {name: "Ferdinand Eberding", department: "Legal & Finance", management: "Teamlead Legal & Finance", studies: "M.Sc Robitics, Coginition, Intelligence", image: "ferdinand_eberding.webp", description: "Open minded, technical student that wants to make an impact.", linkedin: "", },
     {name: "Hai Dang", department: "Education", management: "Teamlead Education", studies: "PhD Human Computer Interaction", image: "hai_dang.webp", description: "", linkedin: "", },
 	{name: "Leonard Wolters", department: "Venture", management: "Teamlead Venture", studies: "M.Sc Management & Innovation", image: "leonard_wolters.webp", description: "", linkedin: "", },

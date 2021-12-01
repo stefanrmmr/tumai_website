@@ -7,7 +7,7 @@
 
 #carousel {
   position: relative;
-  height: 250px;
+  height: 350px;
   top: 50%;
   transform: translateY(19%);
   overflow: hidden;
@@ -70,7 +70,7 @@
 #carousel div.selected {
   z-index: 10;
   left: 50%;
-  transform: translateY(0px) translateX(-50%);
+  transform: translateY(20px) translateX(-50%);
   /*overflow: hidden;*/
 }
 

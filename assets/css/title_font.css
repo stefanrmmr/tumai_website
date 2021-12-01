@@ -1,0 +1,9 @@
+.text-monospace {
+  font-family: Lato,Lato,Lato,Consolas,Liberation Mono,Courier New,monospace!important;
+  /*text-transform: none;*/
+}
+
+.text-uppercase {
+  text-transform: none!important;
+}
+
