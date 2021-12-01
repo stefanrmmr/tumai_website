@@ -41,7 +41,7 @@ let all_members = [
     {name: "Luca Dombetzki", department: "Venture", management: "Multiple department Mentor", studies: "M.Sc Finance & Information Management", image: "luca_dombetzki.webp", description: "", linkedin: "https://www.linkedin.com/in/luca-dombetzki/", },
     {name: "Petar Petrov", department: "Makeathon", management: "Mentor Makeathon", studies: "M.Sc Informatics", image: "petar_petrov.webp", description: "", linkedin: "", },
 	{name: "Philipp Wolters", department: "Industry", management: "Mentor Industry", studies: "M.Sc Robitics, Coginition, Intelligence", image: "philipp_wolters.webp", description: "Passionate about Machine Learning, Computer Vision & Highly Automated Driving", linkedin: "https://www.linkedin.com/in/philippwolters/", },
-    {name: "Richard Gaus", department: "Industry", management: "Mentor Industry", studies: "M.D. Informatics,Medicine", image: "richard_gaus.webp", description: "Passionate about the potential of AI to improve human physical and mental health", linkedin: "https://www.linkedin.com/in/richardgaus/", },
+    {name: "Richard Gaus", department: "Industry", management: "Mentor Industry", studies: "M.D. Medicine, Postgraduate program Informatics", image: "richard_gaus.webp", description: "Passionate about the potential of AI to improve human physical and mental health", linkedin: "https://www.linkedin.com/in/richardgaus/", },
     
     // ACTIVE MEMBERS
 	{name: "Aditya Shantaram Sawant", department: "Education", management: "Active member", studies: "M.Sc Electrical Engineering", image: "aditya_sawant.webp", description: "", linkedin: "", },

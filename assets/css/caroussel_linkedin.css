@@ -9,10 +9,11 @@
   position: relative;
   height: 350px;
   top: 50%;
-  transform: translateY(19%);
+  transform: translateY(30%);
   overflow: hidden;
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   margin-bottom: 2px;
+  /*padding-top: 50px;*/
 }
 
 #carousel div {
