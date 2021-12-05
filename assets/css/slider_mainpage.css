@@ -1,0 +1,113 @@
+.sliderElements, .sliderElements figure, .sliderControls {
+  margin: 0;
+  /*width: 500px;*/
+  /*height: auto;*/
+}
+
+.sliderElements:after {
+  content: ".";
+  display: block;
+  height: .1px;
+  /*clear: both;*/
+  visibility: hidden;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.cssSlider {
+  overflow-x: hidden;
+}
+
+.sliderElements {
+  list-style: none;
+  position: relative;
+  left: 0;
+  width: 400%;
+  margin-bottom: .8em;
+  padding: 0;
+  -webkit-transition: left .8s ease-in-out;
+  -moz-transition: left .8s ease-in-out;
+  -o-transition: left .8s ease-in-out;
+  transition: left .8s ease-in-out;
+}
+
+.sliderElements > li {
+  float: left;
+  width: 25%;
+  position: relative;
+}
+
+#slide02:checked ~ .sliderElements {
+  left: -100%;
+}
+
+#slide03:checked ~ .sliderElements {
+  left: -200%;
+}
+
+#slide04:checked ~ .sliderElements {
+  left: -300%;
+}
+
+/* Bildunterschrift auf dem Bild positionieren */
+
+.sliderElements figcaption {
+  display: block;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+  padding: .2em;
+  background: rgba(0,0,0,.5);
+  font-size: 12px;
+}
+
+/* Bilder responsive */
+
+.sliderElements img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* inputs aus dem Blickfeld schieben */
+
+.cssSlider input {
+  position: absolute;
+  left: -99999px;
+}
+
+/* mittige Ausrichtung der Controls - funktioniert im Zusammenspiel mit inline-block */
+
+.sliderControls {
+  text-align: center;
+}
+
+/* Controls nebeneinander bringen */
+
+.sliderControls li {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Controls auf einheitliche Maße bringen und die Ecken abrunden */
+
+.sliderControls label {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+  cursor: pointer;
+  background: var(--indigo);
+  color: var(--indigo);
+}
+
+/* Attributselektor und indirekter Nachfahrkombinator zum ansteuern der labels */
+
+.sliderControls label:hover, #slide01:checked ~ .sliderControls label[for="slide01"], #slide02:checked ~ .sliderControls label[for="slide02"], #slide03:checked ~ .sliderControls label[for="slide03"], #slide04:checked ~ .sliderControls label[for="slide04"] {
+  background: #ddd;
+  color: #ddd;
+}
+
