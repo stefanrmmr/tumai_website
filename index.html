@@ -82,6 +82,7 @@
     <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form-1.css">
     <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
     <link rel="stylesheet" href="assets/css/parallaxStars.css">
+    <link rel="stylesheet" href="assets/css/Popup-Modal-with-Cookie.css">
     <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
     <link rel="stylesheet" href="assets/css/Process-Steps.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
@@ -108,6 +109,21 @@
 </head>
 
 <body style="background-color: #ffffff;">
+    <div class="modal flash animated" role="dialog" tabindex="-1" id="cookieModal" style="font-size: 10px;opacity: 1;min-width: 300;max-width: 500;min-height: 100;max-height: 200;">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header border rounded border-dark shadow">
+                    <p style="color: #262626;margin-bottom: 0;"><strong>TUM.ai uses Cookies.&nbsp;</strong><br></p><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p style="color: #262626;font-size: 11px;">This website uses cookies from Google Analytics to provide their services and to analyze traffic. Information about how you use the website will be shared with Google. By using this website, you agree to the use of cookies on the website. Close this window or click the button down below to accept the usage of analytics cookies and proceed to the TUM.ai website.&nbsp;<br></p>
+                    <hr>
+                    <p style="color: #262626;margin-bottom: 0;"><strong>By using this website, you agree to the above mentioned cookies.&nbsp;</strong><br></p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-dark" id="cookieModalConsent" type="button" data-dismiss="modal" style="font-family: Lato, sans-serif;border-width: 0px;font-size: 16px;border-radius: 34px;background: #45b69c;">&nbsp; accept cookies &amp; continue to website&nbsp;&nbsp;</button></div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-light navbar-expand-lg shadow navigation-clean-button sticky-top" style="font-family: Lato, sans-serif;opacity: 1;height: 65px;padding-top: 0px;padding-left: 12px;padding-bottom: 0px;background: rgb(11,11,11);filter: blur(0px);">
         <div class="container" style="background-color: transparent;"><a class="navbar-brand" style="padding: 0px;height: 65px;width: 180px;" href="/"><img data-bss-disabled-mobile="true" data-aos="zoom-out-down" data-aos-offset="0" data-aos-delay="50" src="assets/img/logo/logo_final_colorbar_correctshape_cropped.png" style="max-height: 100%;padding: 13px;margin-right: 0px;width: auto;height: 90%;padding-left: 7px;padding-right: 0px;padding-top: 12px;padding-bottom: 12px;margin-top: 2px;margin-left: 0px;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="color: rgb(255,254,254);filter: brightness(200%) contrast(200%) invert(100%);margin-bottom: 1px;"></span></button>
             <div class="collapse navbar-collapse text-center" id="navcol-1" style="opacity: 1;width: 100%;background: rgba(11,11,11,0.99);border-radius: 10px;">
@@ -567,6 +583,8 @@ iframe {overflow:hidden}
     <script src="assets/js/Bold-BS4-Jumbotron-with-Particles-js.js"></script>
     <script src="assets/js/caroussel_linkedin.js"></script>
     <script src="https://pretix.eu/widget/v1.en.js"></script>
+    <script src="assets/js/Popup-Modal-with-Cookie-1.js"></script>
+    <script src="assets/js/Popup-Modal-with-Cookie.js"></script>
     <script src="assets/js/responsive-blog-card-slider-1.js"></script>
     <script src="assets/js/responsive-blog-card-slider.js"></script>
     <script src="assets/js/teamShower.js"></script>
