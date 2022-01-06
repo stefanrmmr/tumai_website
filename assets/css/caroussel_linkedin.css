@@ -8,6 +8,7 @@
 #carousel {
   position: relative;
   height: 350px;
+  width: 100%;
   top: 50%;
   transform: translateY(30%);
   overflow: hidden;
