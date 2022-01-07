@@ -18,3 +18,30 @@ p.text-countdown {
   margin: 0;
 }
 
+.row {
+  margin: 0;
+}
+
+.logo-wrapper {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: solid 1px #eee;
+}
+
+.logo-wrapper img {
+  max-height: 100px;
+  max-width: 100%;
+}
+
+.logo-wrapper a {
+  filter: grayscale(1);
+  transition: all ease 0.3s;
+}
+
+.logo-wrapper a:hover {
+  filter: grayscale(0);
+}
+
