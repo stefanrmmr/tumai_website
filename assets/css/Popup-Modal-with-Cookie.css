@@ -166,7 +166,7 @@
 }
 
 .btn-primary.focus, .btn-primary:focus {
-  box-shadow: 0 0 0 0 #048f83!important;
+  box-shadow: 0 0 0 0 #45b69c!important;
 }
 
 .btn-primary:hover {
@@ -176,8 +176,8 @@
 }
 
 .btn.btn-primary {
-  background-color: #048f83!important;
-  border-color: #048f83!important;
+  background-color: #45b69c!important;
+  border-color: #45b69c!important;
 }
 
 .btn-primary.focus, .btn-primary:focus {
