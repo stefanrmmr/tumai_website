@@ -13,11 +13,12 @@
 }
 
 .hackathon-teaser-wrapper {
-  position: relative;
-  background-color: rgb(0,0,0);
-  height: 64vh;
-  min-height: 25rem;
+  /*position: relative;*/
+  /*background-color: rgb(0,0,0);*/
+  height: 25vh;
+  /*min-height: 25rem;*/
   width: 100%;
+  margin-top: 100px;
   overflow: hidden;
 }
 
