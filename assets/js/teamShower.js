@@ -1,16 +1,19 @@
 let all_members = [
     
-    // PRESIDENTS
-    {name: "Jakob Kruse", department: "IT & Infrastructure", management: "President, Mentor", studies: "M.Sc Electrical Engineering", image: "jakob_kruse.webp", description: "Focus on Software Engineering and AI", linkedin: "https://www.linkedin.com/in/jakob-kruse-b7293a197/", },
-    {name: "Nicolas Remerscheid", department: "Community", management: "President, Mentor", studies: "M.Sc Data Engineering and Analytics", image: "nicolas_remerscheid.webp", description: "Privacy Preserving ML Enthusiast", linkedin: "https://www.linkedin.com/in/nicolas-remerscheid/", },
-    {name: "Tobias Zeulner", department: "Makeathon", management: "President, Mentor Makeathon", studies: "M.Sc Robitics, Coginition, Intelligence", image: "tobias_zeulner.webp", description: "Passion for leadership in a tech-oriented environment", linkedin: "https://www.linkedin.com/in/tobias-zeulner-893080169/", },
+    // ADVISORY BOARD
+    {name: "Jakob Kruse", department: "Board", management: "Founder, Board", studies: "M.Sc Electrical Engineering", image: "jakob_kruse.webp", description: "Focus on Software Engineering and AI", linkedin: "https://www.linkedin.com/in/jakob-kruse-b7293a197/", },
+    {name: "Nicolas Remerscheid", department: "Board", management: "Founder, Board", studies: "M.Sc Data Engineering and Analytics", image: "nicolas_remerscheid.webp", description: "Privacy Preserving ML Enthusiast", linkedin: "https://www.linkedin.com/in/nicolas-remerscheid/", },
+    {name: "Tobias Zeulner", department: "Board", management: "Board Member", studies: "M.Sc Robitics, Coginition, Intelligence", image: "tobias_zeulner.webp", description: "Passion for leadership in a tech-oriented environment", linkedin: "https://www.linkedin.com/in/tobias-zeulner-893080169/", },
+    {name: "Ekin Karabulut", department: "Board", management: "Mentor Makeathon, Board", studies: "M.Sc Robitics, Coginition, Intelligence", image: "ekin_karabulut.webp", description: "Passionate about ML applications in Healthcare", linkedin: "https://www.linkedin.com/in/ekin-karabulut-40baa2187/", },
+    {name: "Florian Mysliwetz", department: "Board", management: "Founder, Board", studies: "Co-Founder @ PatentPlus", image: "florian_mysliwetz.webp", description: "", linkedin: "https://www.linkedin.com/in/florian-mysliwetz-bb98b015a/", },
+    {name: "Nico Henning", department: "Board", management: "Founder, Board", studies: "Venture Development @ Alaiko", image: "nico_henning.webp", description: "", linkedin: "https://www.linkedin.com/in/nicohenning/", },
+     {name: "Sebastian Lettner", department: "Board", management: "Founder, Board", studies: "M.Sc Electrical Engineering", image: "sebastian_lettner.webp", description: "", linkedin: "", },
     
-    // FOUNDERS
-    {name: "Florian Mysliwetz", department: "Founders", management: "Founder, Alumni", studies: "Co-Founder @ PatentPlus", image: "florian_mysliwetz.webp", description: "", linkedin: "https://www.linkedin.com/in/florian-mysliwetz-bb98b015a/", },
-    {name: "Jakob Kruse", department: "Founders", management: "President, Founder, Mentor", studies: "M.Sc Electrical Engineering", image: "jakob_kruse.webp", description: "Focus on Software Engineering and AI", linkedin: "https://www.linkedin.com/in/jakob-kruse-b7293a197/", },
-    {name: "Nico Henning", department: "Founders", management: "Founder, Alumni", studies: "Venture Development @ Alaiko", image: "nico_henning.webp", description: "", linkedin: "https://www.linkedin.com/in/nicohenning/", },
-    {name: "Nicolas Remerscheid", department: "Founders", management: "President, Founder, Mentor", studies: "M.Sc Data Engineering and Analytics", image: "nicolas_remerscheid.webp", description: "Privacy Preserving ML Enthusiast", linkedin: "https://www.linkedin.com/in/nicolas-remerscheid/", },
-    {name: "Sebastian Lettner", department: "Founders", management: "Founder, Alumni", studies: "M.Sc Electrical Engineering", image: "sebastian_lettner.webp", description: "", linkedin: "", },
+    // PRESIDENTS
+    {name: "Leonie Freisinger", department: "Board", management: "President", studies: "M.Sc Mechatronics & Robotics", image: "leonie_freisinger.webp", description: "", linkedin: "https://www.linkedin.com/in/leonie-freisinger-1609811b7/", },
+    {name: "Luca Dombetzki", department: "Board", management: "President", studies: "M.Sc Finance & Information Management", image: "luca_dombetzki.webp", description: "", linkedin: "https://www.linkedin.com/in/luca-dombetzki/", },
+    {name: "Mohd Toaha Umar", department: "Board", management: "President", studies: "M.Sc Communications Engineering", image: "mohd_toaha_umar.webp", description: "", linkedin: "https://www.linkedin.com/in/mohdtoahaumar/", },
+    
     {name: "TUM.ai", department: "Founders", management: "Follow us on Linkedin!", studies: "TUM.ai student initiative, established in December 2019", image: "est2019.webp", description: "We are reads to take action in the field of AI and contribute to pushing data driven solutions into new domains!", linkedin: "https://www.linkedin.com/company/tum-ai/", },
     
     // TEAMLEADS
@@ -24,7 +27,6 @@ let all_members = [
 	{name: "Leonard Wolters", department: "Venture", management: "Teamlead Venture", studies: "M.Sc Management & Innovation", image: "leonard_wolters.webp", description: "", linkedin: "https://www.linkedin.com/in/leonard-wolters/", },
     {name: "Maximilian Forstenhäusler", department: "IT & Infrastructure", management: "Teamlead IT & Infrastructure", studies: "M.Sc Robitics, Coginition, Intelligence", image: "maximilian_forstenhaeusler.webp", description: "Enthusiastic about applied ML and DL", linkedin: "https://www.linkedin.com/in/maximilian-forstenhaeusler/", },
     {name: "Max Prokopp", department: "Marketing & PR", management: "Teamlead Marketing", studies: "M.Sc Business Administration", image: "max_prokopp.webp", description: "", linkedin: "https://www.linkedin.com/in/maxprokopp/", },
-    {name: "Mohd Toaha Umar", department: "Community", management: "Teamlead Community", studies: "M.Sc Communications Engineering", image: "mohd_toaha_umar.webp", description: "", linkedin: "https://www.linkedin.com/in/mohdtoahaumar/", },
     {name: "Nejira Hadzalic", department: "Makeathon", management: "Teamlead Makeathon", studies: "M.Sc Electrical Engineering", image: "nejira_hadzalic.webp", description: "Passionate about future ML applications", linkedin:   "https://www.linkedin.com/in/nejira-hadzalic-595863181/", },
     {name: "Omar Hedeya", department: "Partners & Sponsors", management: "Teamlead Partners & Sponsors", studies: "M.Sc Robitics, Coginition, Intelligence", image: "omar_hedeya.webp", description: "I love connecting ideas from different branches of human knowledge", linkedin: "https://www.linkedin.com/in/omar-hedeya-7698841b8/", },
 	{name: "Patrick Remerscheid", department: "Venture", management: "Teamlead Venture", studies: "M.Sc Robitics, Coginition, Intelligence", image: "patrick_remerscheid.webp", description: "Robotics & AI student with a background in mechanical engineering", linkedin: "https://www.linkedin.com/in/patrickremerscheid/", },
@@ -35,11 +37,8 @@ let all_members = [
 	
     // MENTORS
     {name: "Andreas Döring", department: "Education", management: "Mentor Education", studies: "M.Sc Robitics, Coginition, Intelligence", image: "andreas_doering.webp", description: "Robotics & Vision", linkedin: "https://www.linkedin.com/in/andreas-doering", },
-    {name: "Ekin Karabulut", department: "Makeathon", management: "Mentor Makeathon", studies: "M.Sc Robitics, Coginition, Intelligence", image: "ekin_karabulut.webp", description: "Passionate about ML applications in Healthcare", linkedin: "https://www.linkedin.com/in/ekin-karabulut-40baa2187/", },
     {name: "Kerstin Forster", department: "Education", management: "Mentor Education", studies: "M.Sc Electrical Engineering", image: "kerstin_forster.webp", description: "Committed to encouraging beneficial AI", linkedin: "https://www.linkedin.com/in/kerstin-forster-746763201/", },
     {name: "Leonhard Zirus", department: "Marketing & PR", management: "Mentor Marketing", studies: "B.Sc Informatics", image: "leonhard_zirus.webp", description: "Society oriented thinker, entrepreneur and tech-enthusiast", linkedin: "https://www.linkedin.com/in/leonhard-zirus/", },
-    {name: "Leonie Freisinger", department: "Partners & Sponsors", management: "Mentor Partners & Sponsors", studies: "M.Sc Mechatronics & Robotics", image: "leonie_freisinger.webp", description: "", linkedin: "", },
-    {name: "Luca Dombetzki", department: "Venture", management: "Multiple department Mentor", studies: "M.Sc Finance & Information Management", image: "luca_dombetzki.webp", description: "", linkedin: "https://www.linkedin.com/in/luca-dombetzki/", },
     {name: "Petar Petrov", department: "Makeathon", management: "Mentor Makeathon", studies: "M.Sc Informatics", image: "petar_petrov.webp", description: "", linkedin: "", },
 	{name: "Philipp Wolters", department: "Industry", management: "Mentor Industry", studies: "M.Sc Robitics, Coginition, Intelligence", image: "philipp_wolters.webp", description: "Passionate about Machine Learning, Computer Vision & Highly Automated Driving", linkedin: "https://www.linkedin.com/in/philippwolters/", },
     {name: "Rafi Al Attrach", department: "Community", management: "Mentor Community", studies: "B.Sc Information Systems", image: "rafi_attrach.webp", description: "Sitting at the intersection of IT & Business", linkedin: "https://www.linkedin.com/in/rafi-attrach-ab2a2b196/", },
@@ -126,27 +125,40 @@ let all_members = [
     //{name: "Christian Wallenwein", department: "Venture", management: "Active member", studies: "B.Sc Informatics", image: "christian_wallenwein.webp", description: "", linkedin: "", },
     
     // ALUMNI
-    //{name: "Narine Harutyunyan", department: "Makeathon", management: "Active member", studies: "M.Sc Consumer Science", image: "narine_harutyunyan.webp", description: "", linkedin: "", },
-    //{name: "Abhinav Krishnan", department: "Marketing", management: "Alumni", studies: "", image: "person.webp", description: "", linkedin: "", },
-    //{name: "Hendrik Maier", department: "Venture", management: "Alumni", studies: "M.Sc Management & Technology", image: "person.webp", description: "", linkedin: "", }, 
-    //{name: "Markus Böbel", department: "Makeathon", management: "Alumni", studies: "Information Systems", image: "person.webp", description: "", linkedin: "", }, 
-    //{name: "Julia Kabalar", department: "Makeathon", management: "Active member", studies: "M.Sc Robitics, Coginition, Intelligence", image: "julia_kabalar.webp", description: "Robotic Software Developer with a passion for Computer Vision, Data and Mobility", linkedin: "https://www.linkedin.com/in/julia-kabalar/", },
-	//{name: "Kejsi Struga", department: "Partners & Sponsors", management: "Active member", studies: "M.Sc Business Administration,Informatics", image: "kejsi_struga.webp", description: "", linkedin: "", },
-    //{name: "Omar Eladawy", department: "Education", management: "Active member", studies: "M.Sc Robitics, Coginition, Intelligence", image: "omar_eladawy.webp", description: "", linkedin: "https://www.linkedin.com/in/omareladawy/", },
-    //{name: "Tim Tomov", department: "Education", management: "Active member", studies: "B.Sc Information Systems", image: "tim_tomov.webp", description: "", linkedin: "", },
-    //{name: "Umar Muhammad", department: "Venture", management: "Active member", studies: "M.Sc Applied and Engineering Physics", image: "muhammad_umar.webp", description: "", linkedin: "", },
-    //{name: "Claudius Seitz", department: "Makeathon", management: "Active member", studies: "B.Sc Informatics", image: "claudius_seitz.webp", description: "", linkedin: "", },
+    {name: "Julia Kabalar", department: "Alumni", management: "Alumni", studies: "M.Sc Robitics, Coginition, Intelligence", image: "julia_kabalar.webp", description: "Robotic Software Developer with a passion for Computer Vision, Data and Mobility", linkedin: "https://www.linkedin.com/in/julia-kabalar/", },
+    {name: "Narine Harutyunyan", department: "Alumni", management: "Alumni", studies: "M.Sc Consumer Science", image: "narine_harutyunyan.webp", description: "", linkedin: "", },
+    {name: "Omar Eladawy", department: "Alumni", management: "Alumni", studies: "M.Sc Robitics, Coginition, Intelligence", image: "omar_eladawy.webp", description: "", linkedin: "https://www.linkedin.com/in/omareladawy/", },
+    {name: "Umar Muhammad", department: "Alumni", management: "Alumni", studies: "M.Sc Applied and Engineering Physics", image: "muhammad_umar.webp", description: "", linkedin: "", },
+    {name: "Markus Böbel", department: "Alumni", management: "Alumni", studies: "Information Systems", image: "markus_boebel.webp", description: "", linkedin: "", }, 
+    {name: "Abhinav Krishnan", department: "Alumni", management: "Alumni", studies: "", image: "person.webp", description: "", linkedin: "", },
+    {name: "Hendrik Maier", department: "Alumni", management: "Alumni", studies: "M.Sc Management & Technology", image: "person.webp", description: "", linkedin: "", }, 
+	{name: "Kejsi Struga", department: "Alumni", management: "Alumni", studies: "M.Sc Business Administration,Informatics", image: "kejsi_struga.webp", description: "", linkedin: "", },
+    {name: "Tim Tomov", department: "Alumni", management: "Alumni", studies: "B.Sc Information Systems", image: "tim_tomov.webp", description: "", linkedin: "", },
+    {name: "Claudius Seitz", department: "Alumni", management: "Alumni", studies: "B.Sc Informatics", image: "claudius_seitz.webp", description: "", linkedin: "", },
 	
 	
 ];
 
-let departments = ["Management", "Founders", "Makeathon", "Venture", "Industry", "Education", "IT & Infrastructure", "Legal & Finance", "Community", "Marketing & PR", "Partners & Sponsors"];
+let departments = ["Management", "Board", "Alumni", "Community", "Education", "Industry", "IT & Infrastructure", "Legal & Finance","Makeathon", "Marketing & PR", "Partners & Sponsors", "Venture"];
 let active = 0;
 
 function team_button_pressed(value) {
-    document.getElementById("department_button_" + active).style.backgroundColor = "#474747";
-    active = value;
-    document.getElementById("department_button_" + active).style.backgroundColor = "#6812f4";
+    
+    if (value>=2){
+        document.getElementById("department_button_" + active).style.color = "black";
+        document.getElementById("department_button_" + active).style.backgroundColor = "#ffffff";
+        active = value;
+        document.getElementById("department_button_" + active).style.backgroundColor = "lightgrey";
+        document.getElementById("department_button_" + active).style.color = "#5c2de9";
+    }
+    
+    else {
+        //document.getElementById("department_button_" + active).style.backgroundColor = "#ffffff";
+        active = value;
+        //document.getElementById("department_button_" + active).style.backgroundColor = "lightgrey";
+        //document.getElementById("department_button_" + active).style.color = "white";
+    }
+
 
     team_area(value);
 }
@@ -186,7 +198,9 @@ function team_area(department)
             if (item.management != "Active member" && item.management != "membership PAUSED") {
                 if(!String(item.management).includes("Alumni")) {
                     if (!String(item.management).includes("Founder")) {
-                        members.push(item);
+                        if (!String(item.management).includes("Board")) {
+                            members.push(item);
+                        }
                     }
                 }
             }
