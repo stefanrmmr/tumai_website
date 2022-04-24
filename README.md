@@ -12,5 +12,5 @@
 7. Push the changes
 8. Check ALL the pages that nothing went wrong!
 
-If there are questions, contact Jakob Kruse
+If there are questions, contact Stefan Rummer
  
