@@ -1,16 +1,14 @@
-## TUM.ai Bootstrap Studio Website
-[![Netlify Status](https://api.netlify.com/api/v1/badges/aa612d45-6e1e-4d8c-820b-4ea2f1eaf5ae/deploy-status)](https://app.netlify.com/sites/hopeful-poincare-d0e8c5/deploys)
+## Website for TUM.ai Student Initiative
 
-### How to publish new changes
+Visit the deployed website: https://www.tum-ai.com/ (currently the official website for TUM.ai)<br/>
+Visit the industry projects sub-page: https://www.tum-ai.com/industry-projects <br/>
+Pages that I have implemented: <strong>Landing Page, Industry Projects, Events, Partners & Members</strong><br/><br/>
+Tech stack: [HTML, CSS, JS, Bootstrap, Netlify]<br/>
+TUM.ai Logo/UI design by [Ramona Dombetzki](https://www.linkedin.com/in/ramona-dombetzki/) & [Nils Jakobsen](https://www.linkedin.com/in/nils-jacobsen/)
 
-1. Clone this repository
-2. Finish the Bootstrap Studio File
-3. In BS, click "Export Settings"
-4. Make sure that "Minify CSS/JS" is turned off
-5. Set the export path to the downloaded repository folder
-6. Click Export
-7. Push the changes
-8. Check ALL the pages that nothing went wrong!
 
-If there are questions, contact Stefan Rummer
- 
+![image](https://user-images.githubusercontent.com/82606558/160050297-b75e0391-4ab3-4ade-9610-63494f36951f.png)
+![image](https://user-images.githubusercontent.com/82606558/160050424-eb8ebb19-a51c-4f95-bf8b-803932807148.png)
+![image](https://user-images.githubusercontent.com/82606558/160050547-962975ea-2426-4860-9991-633561d729a6.png)
+![image](https://user-images.githubusercontent.com/82606558/160050632-d0d5375c-897e-45b1-aa90-47001bfcf673.png)
+![image](https://user-images.githubusercontent.com/82606558/160050802-c976188f-f10b-44a0-96dc-6d62ca85a800.png)
