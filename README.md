@@ -3,7 +3,7 @@
 Visit the deployed website: https://www.tum-ai.com/ (currently the official website for TUM.ai)<br/>
 Visit the industry projects sub-page: https://www.tum-ai.com/industry-projects <br/>
 Pages that I have implemented: <strong>Landing Page, Industry Projects, Events, Partners & Members</strong><br/><br/>
-Tech stack: [HTML, CSS, JS, Bootstrap, Netlify]<br/>
+Tech stack: [HTML, CSS, JS, Bootstrap, Netlify, Photoshop]<br/>
 TUM.ai Logo/UI design by [Ramona Dombetzki](https://www.linkedin.com/in/ramona-dombetzki/) & [Nils Jakobsen](https://www.linkedin.com/in/nils-jacobsen/)
 <br/><br/>
 
