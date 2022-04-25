@@ -88,7 +88,8 @@
 .navigation-clean-button.navbar-light .navbar-nav .nav-link:focus, .navigation-clean-button.navbar-light .navbar-nav .nav-link:hover {
   color: #ffffff !important;
   background-color: transparent;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  text-decoration: underline;
   /*font-style: italic;*/
 }
 
